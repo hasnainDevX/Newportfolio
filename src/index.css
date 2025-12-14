@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&display=swap');
+
+body {
+  background-color: #f5f2eb;
+  color: #2a2a2a;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+/* Hero headlines - Elegant serif */
+
+
+@theme {
+  --color-cream-bg: #f5f2eb; /* Main background */
+  --color-charcoal: #2a2a2a; /* All text */
+  --color-soft-blue: #95b0dd;
+
+  --color-soft-beige: #e8dfd5; /* Subtle backgrounds, borders */
+  --color-muted-sage: #a8998c; /* Optional subtle accents */
+
+  --font-lato: "Lato", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-latore: "Libre Caslon Text", serif;
+}

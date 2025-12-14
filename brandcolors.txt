@@ -1,0 +1,9 @@
+/* PRIMARY COLORS */
+--cream-bg: #F9F6F1;        /* Main background */
+--charcoal: #2A2A2A;        /* All text */
+--soft-blue: #95B0DD;       /* Primary accent (buttons, highlights) */
+
+/* SECONDARY COLORS */
+--soft-beige: #E8DFD5;      /* Subtle backgrounds, borders */
+--white: #FFFFFF;           /* Cards, contrast sections */
+--muted-sage: #A8998C;      /* Optional subtle accents */
