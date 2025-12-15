@@ -1,4 +1,3 @@
-import React from "react";
 import { Skiper17 } from "./ui/ServiceCards";
 
 const Services = () => {

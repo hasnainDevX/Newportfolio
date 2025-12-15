@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/components/ui/servicecards.tsx","./src/lib/utils.ts"],"errors":true,"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/header.tsx","./src/components/hero.tsx","./src/components/navbar.tsx","./src/components/portfoliosection.tsx","./src/components/servicesection.tsx","./src/components/ui/servicecards.tsx","./src/lib/utils.ts"],"version":"5.9.3"}

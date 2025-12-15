@@ -1,7 +1,6 @@
-import React from 'react'
 import Hero from "./components/Hero"
 import ribbon from "./assets/image.png";
-import PortfolioSection from './components/PortfolioSection';
+import Portfolio from './components/PortfolioSection';
 import Services from './components/ServiceSection';
 
 const App = () => {
@@ -11,11 +10,8 @@ const App = () => {
       <div className="ribbon">
         <img className='h-[10vh] w-full' src={ribbon} alt="" />
       </div>
-
       <Services />
-      <PortfolioSection />
-
-
+      <Portfolio />
     </div>
   )
 }
