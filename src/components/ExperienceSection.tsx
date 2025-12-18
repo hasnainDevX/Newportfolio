@@ -1,7 +1,7 @@
 
 const ExperienceSection = () => {
   return (
-    <div>
+    <div className="h-screen">
         <h2>Experience Section</h2>
         <p>This is where the experience details will go.</p>
     </div>
