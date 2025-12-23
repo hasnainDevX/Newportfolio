@@ -5,6 +5,7 @@ import Services from './components/ServiceSection';
 import Testimonials from "./components/TestimonialSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ImagesMarquee from "./components/ImagesMarquee";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Portfolio />
       <Testimonials/>
       <ExperienceSection/>
+      <Footer/>
     </div>
   )
 }
