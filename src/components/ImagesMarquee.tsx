@@ -1,11 +1,12 @@
 import image1 from "../assets/image.png";
+import metasite from "../assets/metasite1.png";
 
 const ImagesMarquee = () => {
   const marqueeImages = [
     { src: image1, alt: "Image 1" },
     { src: image1, alt: "Image 2" },
-    { src: image1, alt: "Image 3" },
-    { src: image1, alt: "Image 4" },
+    { src: metasite, alt: "MetaSite 1" },
+    { src: metasite, alt: "MetaSite 2" },
   ];
 
   return (

@@ -40,13 +40,13 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
   }, [cards.length]);
 
   return (
-    <div ref={containerRef} className="relative w-full" style={{ height: `${cards.length * 100}vh` }}>
+    <div ref={containerRef} className="relative w-full " style={{ height: `${cards.length * 100}vh` }}>
       <div className="sticky top-0 h-screen w-full flex items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8">
         <div className="relative h-[92vh] sm:h-[90vh] w-full max-w-7xl overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl">
           {cards.map((card, i) => (
             <div
               key={card.id}
-              className={`absolute inset-0 transition-opacity duration-500 ${
+              className={`absolute inset-0 transition-opacity duration-500  ${
                 i === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
             >
@@ -63,7 +63,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
 
                 {/* Content Section */}
                 <div 
-                  className="w-full md:w-3/5 h-[65%] sm:h-[60%] md:h-full p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 flex flex-col justify-center overflow-y-auto"
+                  className="w-full md:w-3/5 h-[65%] sm:h-[60%] md:h-full p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 flex flex-col justify-center"
                   style={{ 
                     backgroundColor: '#F9F6F1',
                     fontFamily: 'Lato, sans-serif'
