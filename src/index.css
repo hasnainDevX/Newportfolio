@@ -1,7 +1,14 @@
 @import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Yellowtail&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.adobe.com/fonts/podium-soft-variable#licensing-section");
 
 body {
   background-color: #f5f2eb;
@@ -13,12 +20,11 @@ body {
 }
 /* Hero headlines - Elegant serif */
 
-
 @theme {
   --color-cream-bg: #f5f2eb; /* Main background */
   --color-charcoal: #2a2a2a; /* All text */
   --color-soft-blue: #95b0dd;
-  --color-yellowish: #F6F3C2; /* Primary accents, buttons */
+  --color-yellowish: #f6f3c2; /* Primary accents, buttons */
 
   --color-soft-beige: #e8dfd5; /* Subtle backgrounds, borders */
   --color-muted-sage: #a8998c; /* Optional subtle accents */
@@ -27,6 +33,7 @@ body {
   --font-playfair: "Playfair Display", serif;
   --font-latore: "Libre Caslon Text", serif;
   --font-dmsans: "DM Sans", sans-serif;
-  --font-dancingscript: "Dancing Script", cursive;
-  --font-anton: "Anton", sans-serif;
+  --font-archivo-black: "Archivo Black", sans-serif;
+  --font-inter-tight: "Inter Tight", sans-serif;
+  --font-podium-soft-variable: "Podium Soft Variable", sans-serif;
 }

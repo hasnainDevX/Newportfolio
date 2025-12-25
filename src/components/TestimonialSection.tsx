@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
     <div className="relative py-20">
       {/* Title - Will be pinned */}
       <div ref={headerRef} className="text-center mb-32">
-        <h2 className="text-5xl md:text-6xl font-serif mb-4"  style={{ fontFamily: 'Impact, Haettenschweiler, "Franklin Gothic Bold", sans-serif' }}>
+        <h2 className="text-5xl md:text-6xl font-bold mb-4" style={{ fontFamily: 'Podium Soft Variable' }}>
           My favourite <span className="text-soft-blue">quotes</span>
         </h2>
         <p className="text-xl text-gray-600">from clients</p>
