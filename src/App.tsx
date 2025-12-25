@@ -6,6 +6,7 @@ import Testimonials from "./components/TestimonialSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ImagesMarquee from "./components/ImagesMarquee";
 import Footer from "./components/Footer";
+import MarqueeShowcase from "./components/TextMarquee";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Portfolio />
       <Testimonials/>
       <ExperienceSection/>
+      <MarqueeShowcase data={["DEVELOPMENT MADE SIMPLE ✦ DESIGN & DEVELOPMENT"]} speed={20}/>
       <Footer/>
     </div>
   )

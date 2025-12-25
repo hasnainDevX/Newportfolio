@@ -17,11 +17,11 @@ const Footer = () => {
     <footer className="md:bg-yellowish text-[#2a2a2a]">
       {/* Main Footer Content */}
         {/* Tagline */}
-        <div className="text-center mx-auto px-8 pt-20 pb-12">
+        {/* <div className="text-center mx-auto px-8 pt-20 pb-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight mx-auto" style={{ fontFamily: "'Podium Soft', sans-serif", fontWeight: 700, letterSpacing: '0.02em' }}>
             Custom Coded Websites for Visionary Brands Ready to Flourish
           </h2>
-        </div>
+        </div> */}
       <div className="max-w-6xl mx-auto px-8 pt-20 pb-12">
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
@@ -55,7 +55,7 @@ const Footer = () => {
               {[1, 2, 3, 4, 5, 6].map((item) => (
                 <div 
                   key={item}
-                  className="aspect-square bg-[#F6F3C2] hover:bg-[#95b0dd] transition-colors duration-300 cursor-pointer"
+                  className="aspect-square bg-[#95b0dd] transition-colors duration-300 cursor-pointer"
                 />
               ))}
             </div>
@@ -93,7 +93,7 @@ const Footer = () => {
               />
               <button
                 onClick={handleSubscribe}
-                className="w-full px-4 py-2.5 bg-[#2a2a2a] text-[#f5f2eb] font-medium hover:bg-[#95b0dd] hover:text-[#2a2a2a] transition-all duration-300 text-xs uppercase tracking-wider"
+                className="w-full px-4 py-2.5 bg-[#2a2a2a] text-[#f5f2eb] font-medium  transition-all duration-300 text-xs uppercase tracking-wider"
               >
                 Subscribe
               </button>

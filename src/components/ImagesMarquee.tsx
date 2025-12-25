@@ -17,7 +17,9 @@ const ImagesMarquee = () => {
           {marqueeImages.map((image, idx) => (
             <div
               key={`original-${idx}`}
-             className={`inline-block mx-4 flex-shrink-0 transition-transform ${idx % 2 == 0 ? "hover:rotate-5" : "hover:-rotate-5"} `}
+              className={`inline-block mx-4 flex-shrink-0 transition-transform ${
+                idx % 2 == 0 ? "hover:rotate-5" : "hover:-rotate-5"
+              } `}
               style={{
                 transform: `rotate(${idx % 2 === 0 ? "-5deg" : "5deg"})`,
               }}
@@ -25,7 +27,7 @@ const ImagesMarquee = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="h-64 w-auto object-cover rounded-lg shadow-lg"
+                className="h-32 md:h-64 w-auto object-cover rounded-lg shadow-lg"
               />
             </div>
           ))}
@@ -33,7 +35,9 @@ const ImagesMarquee = () => {
           {marqueeImages.map((image, idx) => (
             <div
               key={`duplicate-${idx}`}
-              className={`inline-block mx-4 flex-shrink-0 transition-transform ${idx % 2 == 0 ? "hover:rotate-5" : "hover:-rotate-5"} `}
+              className={`inline-block mx-4 flex-shrink-0 transition-transform ${
+                idx % 2 == 0 ? "hover:rotate-5" : "hover:-rotate-5"
+              } `}
               style={{
                 transform: `rotate(${idx % 2 === 0 ? "-5deg" : "5deg"})`,
               }}
@@ -41,7 +45,7 @@ const ImagesMarquee = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="h-64 w-auto object-cover rounded-lg shadow-lg"
+                className="h-32 md:h-64 w-auto object-cover rounded-lg shadow-lg"
               />
             </div>
           ))}
@@ -59,12 +63,17 @@ const ImagesMarquee = () => {
         }
 
         .animate-marquee {
-          animation: marquee 20s linear infinite;
+          animation: marquee 12s linear infinite;
         }
 
         .animate-marquee:hover {
           animation-play-state: paused;
         }
+          @media (max-width: 768px) {
+            .animate-marquee {
+              animation: marquee 5s linear infinite;
+            }
+          }
       `}</style>
     </div>
   );
