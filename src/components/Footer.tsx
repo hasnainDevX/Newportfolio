@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-8 pt-20 pb-12">
         {/* Tagline */}
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight max-w-4xl mx-auto" style={{ fontFamily: 'Impact, Haettenschweiler, "Franklin Gothic Bold", sans-serif', letterSpacing: '-0.02em' }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight max-w-4xl mx-auto font-anton" style={{ fontFamily: 'Impact, Haettenschweiler, "Franklin Gothic Bold", sans-serif', letterSpacing: '-0.02em' }}>
             Custom Coded Websites for Visionary Brands Ready to Flourish
           </h2>
         </div>
