@@ -16,13 +16,13 @@ const Footer = () => {
   return (
     <footer className="md:bg-yellowish text-[#2a2a2a]">
       {/* Main Footer Content */}
-      <div className="max-w-6xl mx-auto px-8 pt-20 pb-12">
         {/* Tagline */}
-        <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight mx-auto " style={{ fontFamily: 'Podium Soft Variable' }}>
+        <div className="text-center mx-auto px-8 pt-20 pb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight mx-auto" style={{ fontFamily: 'Podium Soft Variable' }}>
             Custom Coded Websites for Visionary Brands Ready to Flourish
           </h2>
         </div>
+      <div className="max-w-6xl mx-auto px-8 pt-20 pb-12">
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
           {/* Quick Links */}
