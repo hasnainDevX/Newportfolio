@@ -19,7 +19,7 @@ const PortfolioSection = () => {
   return (
     <div className="py-20 px-4">
       <div className="headings my-16 md:my-28 lg:my-32 space-y-6 px-4 md:px-12">
-        <h1 className="text-[#2A2A2A] text-5xl font-light md:text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-latore md:leading-snug text-center px-4 md:px-0 max-w-4xl mx-auto"  style={{ fontFamily: 'Impact, Haettenschweiler, "Franklin Gothic Bold", sans-serif' }}>
+        <h1 className="text-[#2A2A2A] text-5xl font-light md:text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl md:leading-snug text-center px-4 md:px-0 max-w-4xl mx-auto"  style={{ fontFamily: 'Impact, Haettenschweiler, "Franklin Gothic Bold", sans-serif' }}>
           Project <span className="text-[#95B0DD]">Spotlight</span>
         </h1>
         <h4 className="text-xl px-4 md:px-16 text-center text-[#2A2A2A] max-w-7xl mx-auto">
