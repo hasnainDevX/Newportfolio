@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#f5f2eb] text-[#2a2a2a]">
+    <footer className="bg-yellowish text-[#2a2a2a]">
       {/* Main Footer Content */}
       <div className="max-w-6xl mx-auto px-8 pt-20 pb-12">
         {/* Tagline */}
