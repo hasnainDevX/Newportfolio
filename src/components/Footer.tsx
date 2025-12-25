@@ -18,7 +18,7 @@ const Footer = () => {
       {/* Main Footer Content */}
         {/* Tagline */}
         <div className="text-center mx-auto px-8 pt-20 pb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight mx-auto" style={{ fontFamily: 'Podium Soft Variable' }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight mx-auto" style={{ fontFamily: "'Podium Soft', sans-serif", fontWeight: 700, letterSpacing: '0.02em' }}>
             Custom Coded Websites for Visionary Brands Ready to Flourish
           </h2>
         </div>

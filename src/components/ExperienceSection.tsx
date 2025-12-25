@@ -16,7 +16,7 @@ const ExperienceSection = () => {
         </div>
 
         <div className="relative z-10 space-y-8">
-          <h2 className="text-4xl md:text-5xl  font-black uppercase tracking-tight text-charcoal" style={{ fontFamily: 'Podium Soft Variable' }}>
+          <h2 className="text-4xl md:text-5xl  font-black uppercase tracking-tight text-charcoal" style={{ fontFamily: "'Podium Soft', sans-serif", fontWeight: 700, letterSpacing: '0.02em' }}>
             Industries I've Worked With
           </h2>
           

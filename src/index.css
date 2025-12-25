@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@font-face {
+  font-family: 'Podium Soft';
+  src: url('/fonts/podium-soft-regular.woff2') format('woff2'),
+       url('/fonts/podium-soft-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap");
-
-@import url("https://fonts.adobe.com/fonts/podium-soft-variable#licensing-section");
+@font-face {
+  font-family: 'Podium Soft';
+  src: url('/fonts/podium-soft-regular.eot') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   background-color: #f5f2eb;
@@ -18,22 +27,16 @@ body {
   padding: 0;
   overflow-x: hidden !important;
 }
-/* Hero headlines - Elegant serif */
 
 @theme {
-  --color-cream-bg: #f5f2eb; /* Main background */
-  --color-charcoal: #2a2a2a; /* All text */
+  --color-cream-bg: #f5f2eb;
+  --color-charcoal: #2a2a2a;
   --color-soft-blue: #95b0dd;
-  --color-yellowish: #f6f3c2; /* Primary accents, buttons */
-
-  --color-soft-beige: #e8dfd5; /* Subtle backgrounds, borders */
-  --color-muted-sage: #a8998c; /* Optional subtle accents */
+  --color-yellowish: #f6f3c2;
+  --color-soft-beige: #e8dfd5;
+  --color-muted-sage: #a8998c;
 
   --font-lato: "Lato", sans-serif;
   --font-playfair: "Playfair Display", serif;
-  --font-latore: "Libre Caslon Text", serif;
-  --font-dmsans: "DM Sans", sans-serif;
-  --font-archivo-black: "Archivo Black", sans-serif;
-  --font-inter-tight: "Inter Tight", sans-serif;
-  --font-podium-soft-variable: "Podium Soft Variable", sans-serif;
+  --font-podium-soft: "Podium Soft", sans-serif;
 }
