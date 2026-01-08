@@ -6,7 +6,7 @@ const Hero = () => {
       className="min-h-screen bg-cover bg-center bg-no-repeat relative "
       style={{
         backgroundImage:
-          "url('https://belle-creative.co.uk/wp-content/uploads/2025/09/homepage-services-grid-1.png')",
+          "url('https://images.unsplash.com/photo-1677100091678-1e96b3de3a38?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         backgroundColor: "#F9F6F1",
         backgroundAttachment: "fixed",
       }}
@@ -27,7 +27,7 @@ const Hero = () => {
 
         {/* Main Heading */}
         <h1
-          className="text-[44px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0"
+          className="text-[44px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-8xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0"
           style={{ fontFamily: "Libre Caslon Text, serif" }}
         >
           Designing & building impactful websites for businesses that are ready
@@ -36,14 +36,14 @@ const Hero = () => {
 
 
         {/* Description */}
-        <p
+        {/* <p
           className="text-[16px] sm:text-base md:text-lg lg:text-xl leading-relaxed sm:leading-relaxed md:leading-loose max-w-3xl opacity-95 font-light px-2 sm:px-4 md:px-0 hidden md:block"
           style={{ fontFamily: "Lato, sans-serif" }}
         >
           It's time to create an obsession-worthy brand that demands attention.
           Partnering with ambitious entrepreneurs to build industry-leading
           brands
-        </p>
+        </p> */}
 
         {/* CTA Button */}
         <button

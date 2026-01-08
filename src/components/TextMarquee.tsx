@@ -2,8 +2,8 @@
 const TextMarquee = ({ data, speed = 20 }: { data: string[], speed?: number }) => {
   return (
     <div>
-        <div className="overflow-hidden whitespace-nowrap bg-[#F0F0F0] py-4" style={{ fontFamily: "'Podium Soft', sans-serif", fontWeight: 300, letterSpacing: '0.03em' }}>
-            <div className="animate-textmarquee inline-block text-4xl md:text-5xl lg:text-6xl font-black text-[#2A2A2A] uppercase">
+        <div className="overflow-hidden whitespace-nowrap bg-[#F0F0F0]" style={{ fontFamily: "Libre Caslon Text, serif" }}>
+            <div className="animate-textmarquee inline-block text-3xl font-black bg-[#2A2A2A] uppercase text-white py-6">
                 {data.map((text, idx)=> (
                     <span key={idx} className="mx-8 hover:text-soft-blue">{text}</span>
                 ))}
