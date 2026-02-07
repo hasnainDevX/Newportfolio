@@ -4,14 +4,14 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
+  
   const leftNavItems = [
     { name: "PACKAGES", path: "/packages" },
-    { name: "TESTIMONIALS", path: "/testimonials" },
-    { name: "ABOUT US", path: "/about-us" }
+    { name: "ABOUT US", path: "/about-us" },
+    { name: "PORTFOLIO", path: "/portfolio" }
   ];
   const rightNavItems = [
-    { name: "PORTFOLIO", path: "/portfolio" }
+    { name: "NEWS LETTER", path: "/news-letter" },
   ];
 
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <nav className="hidden lg:grid fixed top-8 left-1/2 -translate-x-1/2 z-50 bg-white/95 backdrop-blur-lg px-8 py-4 rounded-full shadow-md grid-cols-[1fr_auto_1fr] gap-8 items-center">
         {/* Left Items */}
-        <div className="flex gap-8 justify-end items-center">
+        <div className="flex gap-8 justify-end items-center mr-4">
           {leftNavItems.map((item, idx) => {
             const isActive = location.pathname === item.path;
             return (
