@@ -4,15 +4,13 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  
+
   const leftNavItems = [
     { name: "PACKAGES", path: "/packages" },
     { name: "ABOUT US", path: "/about-us" },
-    { name: "PORTFOLIO", path: "/portfolio" }
+    { name: "PORTFOLIO", path: "/portfolio" },
   ];
-  const rightNavItems = [
-    { name: "NEWS LETTER", path: "/news-letter" },
-  ];
+  const rightNavItems = [{ name: "NEWS LETTER", path: "/news-letter" }];
 
   return (
     <>
@@ -37,7 +35,10 @@ const Navbar = () => {
         </div>
 
         {/* Center Logo - Always Centered */}
-        <Link to="/" className="text-2xl tracking-wide text-center whitespace-nowrap px-8 font-serif hover:opacity-80 transition">
+        <Link
+          to="/"
+          className="text-2xl tracking-wide text-center whitespace-nowrap px-8 font-serif hover:opacity-80 transition"
+        >
           Hasnain Webworks
         </Link>
 
@@ -59,12 +60,14 @@ const Navbar = () => {
           })}
 
           {/* CTA Button */}
-          <button
-            className="px-6 py-2.5 rounded-full text-sm font-medium tracking-wide text-white transition-all hover:opacity-90 whitespace-nowrap cursor-pointer"
-            style={{ backgroundColor: "#95B0DD" }}
-          >
-            ENQUIRY FORM
-          </button>
+          <Link to="/enquiry">
+            <button
+              className="px-6 py-2.5 rounded-full text-sm font-medium tracking-wide text-white transition-all hover:opacity-90 whitespace-nowrap cursor-pointer"
+              style={{ backgroundColor: "#95B0DD" }}
+            >
+              ENQUIRY FORM
+            </button>
+          </Link>
 
           {/* Instagram Icon */}
           <a
@@ -88,7 +91,10 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <nav className="lg:hidden fixed top-4 left-4 right-4 z-50 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-full shadow-md">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-lg font-serif tracking-wide hover:opacity-80 transition">
+          <Link
+            to="/"
+            className="text-lg font-serif tracking-wide hover:opacity-80 transition"
+          >
             Hasnain Webworks
           </Link>
 
@@ -131,12 +137,17 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            <button
-              className="w-full px-6 py-2.5 rounded-full text-sm font-medium tracking-wide text-white"
-              style={{ backgroundColor: "#95B0DD" }}
+            <Link
+              to="/enquiry"
+              className="text-sm font-medium tracking-wider text-gray-800 hover:opacity-80 transition"
             >
-              ENQUIRY FORM
-            </button>
+              <button
+                className="w-full px-6 py-2.5 rounded-full text-sm font-medium tracking-wide text-white"
+                style={{ backgroundColor: "#95B0DD" }}
+              >
+                ENQUIRY FORM
+              </button>
+            </Link>
           </div>
         )}
       </nav>
