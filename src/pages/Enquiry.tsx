@@ -1,6 +1,7 @@
 import EnquiryAbout from "@/components/Enquiry/EnquiryAbout"
 import EnquiryForm from "@/components/Enquiry/EnquiryForm"
 import EnquiryHero from "@/components/Enquiry/EnquiryHero"
+import FAQSection from "@/components/FAQ"
 import Footer from "@/components/Footer"
 
 const Enquiry = () => {
@@ -9,6 +10,7 @@ const Enquiry = () => {
         <EnquiryHero />
         <EnquiryAbout />
         <EnquiryForm />
+        <FAQSection/>
         <Footer/>
     </div>
   )

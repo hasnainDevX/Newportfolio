@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Yellowtail&display=swap');
 
-@font-face {
+/* @font-face {
   font-family: 'Podium Soft';
   src: url('/fonts/podium-soft-regular.woff2') format('woff2'),
        url('/fonts/podium-soft-regular.woff') format('woff');
@@ -17,7 +17,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 body {
   background-color: #FFFCF9;
@@ -39,4 +39,5 @@ body {
   --font-lato: "Lato", sans-serif;
   --font-playfair: "Playfair Display", serif;
   --font-podium-soft: "Podium Soft", sans-serif;
+  --font-libre-caslon: "Libre Caslon Text", serif;
 }

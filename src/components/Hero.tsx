@@ -33,18 +33,6 @@ const Hero = () => {
           Designing & building impactful websites for businesses that are ready
           to shine
         </h1>
-
-
-        {/* Description */}
-        {/* <p
-          className="text-[16px] sm:text-base md:text-lg lg:text-xl leading-relaxed sm:leading-relaxed md:leading-loose max-w-3xl opacity-95 font-light px-2 sm:px-4 md:px-0 hidden md:block"
-          style={{ fontFamily: "Lato, sans-serif" }}
-        >
-          It's time to create an obsession-worthy brand that demands attention.
-          Partnering with ambitious entrepreneurs to build industry-leading
-          brands
-        </p> */}
-
         {/* CTA Button */}
         <button
           className="mt-10 px-12 py-4 rounded-full text-sm md:text-base font-medium tracking-wide transition-all shadow-lg shadow-gray-800 hover:opacity-90 cursor-pointer"

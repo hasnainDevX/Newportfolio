@@ -6,7 +6,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const leftNavItems = [
-    { name: "HOME", path: "/home" },
+    { name: "HOME", path: "/" },
     { name: "ABOUT US", path: "/about-us" },
     { name: "PORTFOLIO", path: "/portfolio" },
   ];

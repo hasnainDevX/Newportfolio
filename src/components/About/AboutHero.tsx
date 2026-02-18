@@ -16,6 +16,7 @@ const AboutHero = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
+  
   return (
     <div className="bg-cover bg-center bg-no-repeat relative bg-[#FFFCF9]">
       <header className="relative z-50">
@@ -32,8 +33,7 @@ const AboutHero = () => {
         {/* Main Heading */}
         <div>
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0"
-            style={{ fontFamily: "Libre Caslon Text, serif" }}
+            className="text-3xl sm:text-4xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0 font-libre-caslon! md:capitalize uppercase tracking-wide"
           >
             Strategic website design for creative founders who want their brand
             to be seen, felt, and remembered
