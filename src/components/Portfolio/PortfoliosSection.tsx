@@ -1,4 +1,3 @@
-import { useState } from "react";
 // import portfolio2 from "../../assets/image1.png";
 import portfolio3 from "../../assets/image2.png";
 import portfolio1 from "../../assets/project1.png";

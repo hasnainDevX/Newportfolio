@@ -81,7 +81,7 @@ const PackagesSection = () => {
             </div>
 
             {/* Apply Button */}
-            <button className="px-16 py-3 border-2 border-black text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300">
+            <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
               Apply
             </button>
           </div>
@@ -169,9 +169,9 @@ const PackagesSection = () => {
               </p>
             </div>
 
-            {/* Learn More Button */}
-            <button className="px-12 py-3 border-2 border-black text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300">
-              Learn More
+             {/* Apply Button */}
+            <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+              Apply
             </button>
           </div>
         </div>
@@ -374,8 +374,8 @@ const PackagesSection = () => {
               </div>
             </div>
 
-            {/* Apply Button */}
-            <button className="px-16 py-3 border-2 border-black text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300">
+             {/* Apply Button */}
+            <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
               Apply
             </button>
           </div>

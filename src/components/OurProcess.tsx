@@ -1,16 +1,13 @@
 
 const OurProcess = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+    <div className="relative min-h-screen w-full overflow-hidden bg-charcoal">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-          "url('https://belle-creative.co.uk/wp-content/uploads/2025/07/creative-wordpress-website-01-1-scaled.webp')",
-        }}
+    
       >
-        <div className="absolute inset-0 bg-black/60 bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-opacity-50"></div>
       </div>
 
       {/* Content */}
