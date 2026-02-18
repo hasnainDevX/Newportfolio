@@ -10,7 +10,7 @@ const Navbar = () => {
     { name: "ABOUT US", path: "/about-us" },
     { name: "PORTFOLIO", path: "/portfolio" },
   ];
-  const rightNavItems = [{ name: "NEWS LETTER", path: "/news-letter" }];
+  const rightNavItems = [{ name: "THE BLOG", path: "/blog" }];
 
   return (
     <>
@@ -71,7 +71,7 @@ const Navbar = () => {
 
           {/* Instagram Icon */}
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/hasnainwebworks"
             target="_blank"
             rel="noopener noreferrer"
             className="w-9 h-9 rounded-full flex items-center justify-center cursor-pointer hover:opacity-70 transition flex-shrink-0"

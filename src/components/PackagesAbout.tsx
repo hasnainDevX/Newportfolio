@@ -2,7 +2,7 @@
 
 const PackagesAbout = () => {
   return (
-    <div className="w-full min-h-screen bg-[#f5f3f0] py-16">
+    <div className="w-full min-h-screen py-16">
         {/* <h1 className="text-4xl font-serif text-center py-16">About Packages</h1> */}
         <h1 className="text-7xl font-serif text-center py-4 capitalize">For service providers ready to stand out, attract dream clients, and feel proud of their brand</h1>
         <div className="max-w-6xl mx-auto leading-8 py-16 px-4">

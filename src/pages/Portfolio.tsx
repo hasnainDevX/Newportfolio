@@ -6,7 +6,7 @@ import PortfoliosSection from '@/components/Portfolio/PortfoliosSection'
 
 const Portfolio = () => {
   return (
-    <div>
+    <div className='bg-[#FFFCF9]'>
         <PortfolioHero/>
         <PortfoliosSection/>
         <MarqueeShowcase data={["DEVELOPMENT  MADE  SIMPLE / ✦ /  DESIGN  &  DEVELOPMENT"]} speed={20}/>

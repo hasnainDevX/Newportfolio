@@ -1,7 +1,7 @@
 
 const PackagesSection = () => {
   return (
-    <div className="w-full min-h-screen bg-[#f5f3f0]">
+    <div className="w-full min-h-screen ">
       <hr className="border-t border-gray-500" />
       <div className="package1 flex flex-col lg:flex-row w-full h-auto gap-8 lg:gap-0 py-16">
         {/* Left Decorative Part */}
@@ -10,7 +10,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Center Image Part */}
-        <div className="centerimage flex-[0_0_35%] flex items-center justify-center bg-[#f5f3f0] p-8 lg:p-16">
+        <div className="centerimage flex-[0_0_35%] flex items-center justify-center bg-[#FFFCF9] p-8 lg:p-16">
           <div className="w-full max-w-md">
             <img
               src="https://belle-creative.co.uk/wp-content/uploads/2025/07/jewelry-website-design-uk-05-scaled.webp"
@@ -21,7 +21,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Right Text Part */}
-        <div className="textpart flex-[0_0_60%] p-8 lg:p-16 flex flex-col justify-center bg-[#f5f3f0]">
+        <div className="textpart flex-[0_0_60%] p-8 lg:p-16 flex flex-col justify-center">
           <div className="max-w-xl">
             {/* Number */}
             <p className="text-sm font-light mb-4 tracking-wider">01</p>
@@ -92,7 +92,7 @@ const PackagesSection = () => {
       {/* Package 2 - Web Design */}
       <div className="package2 flex flex-col lg:flex-row w-full h-auto gap-8 lg:gap-0 py-16">
         {/* Left Text Part */}
-        <div className="leftpart flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#f5f3f0]">
+        <div className="leftpart flex-1 p-8 lg:p-16 flex flex-col justify-center">
           <div className="max-w-md">
             {/* Number */}
             <p className="text-sm font-light mb-4 tracking-wider">02</p>
@@ -120,7 +120,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Center Image Part */}
-        <div className="centerpart flex-1 flex items-center justify-center bg-[#f5f3f0]">
+        <div className="centerpart flex-1 flex items-center justify-center bg-[#FFFCF9]">
           <div className="w-full max-w-md">
             <img
               src="https://belle-creative.co.uk/wp-content/uploads/2025/09/framed-slideshow.gif"
@@ -131,7 +131,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Right Details Part */}
-        <div className="rightpart flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#f5f3f0]">
+        <div className="rightpart flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#FFFCF9]">
           <div className="max-w-md">
             {/* Timeline and Investment */}
             <div className="mb-8">
@@ -180,7 +180,7 @@ const PackagesSection = () => {
       {/* Package 3 - VIP Design Day */}
       <div className="package3 flex flex-col lg:flex-row w-full h-auto gap-8 lg:gap-0 py-16">
         {/* Left Image Part */}
-        <div className="leftimage flex-1 p-8 lg:p-16 flex items-center justify-center bg-[#f5f3f0]">
+        <div className="leftimage flex-1 p-8 lg:p-16 flex items-center justify-center bg-[#FFFCF9]">
           <div className="w-full max-w-md">
             <img
               src="https://images.unsplash.com/photo-1490136001793-14ccbc24fbac?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -191,7 +191,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Center Content Part */}
-        <div className="centercontent flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#f5f3f0]">
+        <div className="centercontent flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#FFFCF9]">
           <div className="max-w-lg">
             {/* Number */}
             <p className="text-sm font-light mb-4 tracking-wider">03</p>
@@ -311,7 +311,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Right Sidebar Part */}
-        <div className="rightsidebar flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#f5f3f0] lg:border-l border-gray-300">
+        <div className="rightsidebar flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#FFFCF9] lg:border-l border-gray-300">
           <div className="max-w-md">
             {/* Timeline and Investment */}
             <div className="mb-8">
