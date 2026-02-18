@@ -1,4 +1,6 @@
-// import portfolio2 from "../../assets/image1.png";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import portfolio3 from "../../assets/image2.png";
 import portfolio1 from "../../assets/project1.png";
 import portfolio from "../../assets/portfolio1.webp";
@@ -35,7 +37,7 @@ const portfolioData: Portfolio[] = [
     title: "MODERN WELLNESS RETREAT",
     category: "BRAND + DIGITAL EXPERIENCE",
     image: portfolio3,
-    desc: "A contemporary wellness retreat offering holistic health services, combining modern design with nature-inspired elements to create a serene and rejuvenating environment.",
+    desc: "A contemporary wellness retreat offering holistic health services, combining modern design with nature-inspired elements.",
     year: "2023",
   },
   {
@@ -48,62 +50,132 @@ const portfolioData: Portfolio[] = [
   },
 ];
 
+const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold: 0.15 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(28px)",
+        transition: `opacity 0.75s ease ${delay}ms, transform 0.75s ease ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
 const PortfoliosSection = () => {
   return (
-    <div className="w-full bg-[#FFFCF9]">
+    <div className="w-full bg-[#FAFAF8]">
+
       {/* Header */}
       <div className="px-6 py-24 md:py-32 text-center bg-charcoal text-white">
         <p
-          className="text-sm md:text-base tracking-[0.3em] uppercase mb-12 font-light"
+          className="text-xs tracking-[0.4em] uppercase mb-6 font-light text-white/50"
           style={{ fontFamily: "sans-serif" }}
         >
           EXPLORE MY RECENT WORK
         </p>
-
         <h1
-          className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-light tracking-wide"
+          className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wide"
           style={{ fontFamily: '"Libre Caslon Text", serif' }}
         >
           SELECTED PROJECTS
         </h1>
       </div>
 
-      {/* Portfolio Grid */}
-      <div className="w-full">
+      {/* Portfolio Rows */}
+      <div className="w-full divide-y divide-[#E8E4DF]">
         {portfolioData.map((item, idx) => (
           <div
-            className="portfolio-part w-full flex flex-col md:flex-row items-center justify-between"
             key={idx}
+            className="w-full flex flex-col md:flex-row items-stretch min-h-[520px]"
           >
-            <div className="textpart flex-1 flex justify-center items-start flex-col w-full h-full py-12">
-              <div className="text flex flex-col w-full h-full px-6 md:px-24 space-y-8">
-                <h2 className="text-5xl font-playfair mb-4">{item.title}</h2>
-                <p className="text-sm text-gray-400 mb-2">{item.category}</p>
-                <p className="text-slate-800 ">{item.desc}</p>
-                {/* Open Portfolio Button */}
-                <button className="px-12 py-3 border-2 border-black text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300 w-fit">
-                  Check Live Site
-                </button>
-              </div>
+            {/* ── Text Part ── */}
+            <div className="flex-1 flex items-center bg-[#FAFAF8] py-16 md:py-0">
+              <FadeIn delay={100}>
+                <div className="px-8 md:px-16 lg:px-24 space-y-7 max-w-xl">
+
+                  {/* Category + Year badge */}
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="text-[11px] tracking-[0.3em] uppercase text-[#999] font-medium"
+                      style={{ fontFamily: "sans-serif" }}
+                    >
+                      {item.category}
+                    </span>
+                    <span
+                      className="text-[10px] tracking-widest px-2.5 py-1 border border-[#D5CFC8] text-[#888] rounded-full"
+                      style={{ fontFamily: "sans-serif" }}
+                    >
+                      {item.year}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h2
+                    className="text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.05] tracking-tight text-[#1A1A1A] font-normal"
+                    style={{ fontFamily: '"Libre Caslon Text", serif' }}
+                  >
+                    {item.title}
+                  </h2>
+
+                  {/* Thin rule */}
+                  <div className="w-10 h-px bg-[#C8BFB4]" />
+
+                  {/* Description */}
+                  <p
+                    className="text-[15px] leading-relaxed text-[#6B6560] max-w-sm"
+                    style={{ fontFamily: "sans-serif", fontWeight: 400 }}
+                  >
+                    {item.desc}
+                  </p>
+
+                  {/* Button */}
+                  <button className="px-16 py-3 bg-soft-beige border-charcoal border rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300"
+                    style={{ fontFamily: "sans-serif" }}
+                  >
+                    Check Live Site
+                  </button>
+
+                </div>
+              </FadeIn>
             </div>
+
+            {/* ── Image Part ── */}
             <div
-              className={`imgpart w-full flex-1 ${idx % 2 === 0 ? "order-first md:order-last" : "order-last md:order-first"} w-full h-auto`}
+              className={`flex-1 w-full overflow-hidden ${
+                idx % 2 !== 0 ? "md:order-first" : ""
+              }`}
+              style={{ minHeight: 380 }}
             >
-              <img src={item.image} alt={item.title} />
+              <FadeIn delay={200}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                  style={{ minHeight: 380, display: "block" }}
+                />
+              </FadeIn>
             </div>
+
           </div>
         ))}
       </div>
 
-      {/* Footer Divider */}
-      {/* <div className="border-t border-white/10 text-center">
-        <p
-          className="text-xs tracking-[0.3em] uppercase font-light"
-          style={{ fontFamily: "sans-serif" }}
-        >
-          MORE COMING SOON
-        </p>
-      </div> */}
     </div>
   );
 };

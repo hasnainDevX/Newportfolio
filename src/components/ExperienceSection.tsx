@@ -16,11 +16,11 @@ const ExperienceSection = () => {
         </div>
 
         <div className="relative z-10 space-y-8">
-          <h2 className="text-4xl md:text-5xl  font-black uppercase tracking-tight text-charcoal" style={{ fontFamily: "'Podium Soft', sans-serif", fontWeight: 700, letterSpacing: '0.02em' }}>
+          <h2 className="text-4xl md:text-5xl  font-black uppercase tracking-tight text-charcoal" style={{ fontFamily: "Libre Caslon Text, serif" }}>
             Industries I've Worked With
           </h2>
           
-          <p className="text-xl md:text-2xl lg:text-2xl font-light leading-relaxed text-[#2a2a2a] max-w-4xl" style={{ fontFamily: 'Georgia, serif' }}>
+          <p className="text-xl md:text-2xl lg:text-2xl font-light leading-relaxed text-[#2a2a2a] max-w-4xl" style={{ fontFamily: "Georgia, serif" }}>
             Fashion designers / social media managers / beauty brands / wedding stationary / coaches / loneliness communities / candle makers / therapists / yoga studios / pet care & so much more
           </p>
 

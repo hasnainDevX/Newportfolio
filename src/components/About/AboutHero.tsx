@@ -32,7 +32,7 @@ const AboutHero = () => {
         {/* Main Heading */}
         <div>
           <h1
-            className="text-lg sm:text-4xl md:text-5xl  leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0"
+            className="text-3xl sm:text-4xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0"
             style={{ fontFamily: "Libre Caslon Text, serif" }}
           >
             Strategic website design for creative founders who want their brand
@@ -70,11 +70,9 @@ const AboutHero = () => {
             process that gives you a site designed to grow with you—one that
             feels like home and keeps paying off for years to come.
           </h4>
-          <button
-            type="submit"
-            className="px-12 py-3 border-2 border-black text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300"
-          >
-            Submit
+          {/* Button */}
+          <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+            Apply
           </button>
         </div>
       </div>

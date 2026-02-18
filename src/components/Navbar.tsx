@@ -6,11 +6,11 @@ const Navbar = () => {
   const location = useLocation();
 
   const leftNavItems = [
-    { name: "PACKAGES", path: "/packages" },
+    { name: "HOME", path: "/home" },
     { name: "ABOUT US", path: "/about-us" },
     { name: "PORTFOLIO", path: "/portfolio" },
   ];
-  const rightNavItems = [{ name: "THE BLOG", path: "/blog" }];
+  const rightNavItems = [{ name: "PACKAGES", path: "/packages" }];
 
   return (
     <>

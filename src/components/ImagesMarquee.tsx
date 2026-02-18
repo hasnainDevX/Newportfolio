@@ -1,79 +1,69 @@
-import image1 from "../assets/image.png";
+import image1 from "../assets/portfolio1.webp";
+import image2 from "../assets/portfolio2.webp";
 import metasite from "../assets/metasite1.png";
 
-const ImagesMarquee = () => {
-  const marqueeImages = [
-    { src: image1, alt: "Image 1" },
-    { src: image1, alt: "Image 2" },
-    { src: metasite, alt: "MetaSite 1" },
-    { src: metasite, alt: "MetaSite 2" },
-  ];
+const marqueeImages = [
+  { src: image1, alt: "Project 1" },
+  { src: image2, alt: "Project 2" },
+  { src: metasite, alt: "MetaSite" },
+];
 
+const ImagesMarquee = () => {
   return (
-    <div className="overflow-hidden py-12 bg-gray-50">
-      <div className="relative">
-        <div className="flex animate-marquee hover:pause whitespace-nowrap">
-          {/* First set of images */}
-          {marqueeImages.map((image, idx) => (
-            <div
-              key={`original-${idx}`}
-              className={`inline-block mx-4 flex-shrink-0 transition-transform ${
-                idx % 2 == 0 ? "hover:rotate-5" : "hover:-rotate-5"
-              } `}
+    <div className="overflow-hidden py-16 bg-gray-50">
+      <div
+        className="flex whitespace-nowrap"
+        style={{
+          animation: "marquee 18s linear infinite",
+          willChange: "transform",
+        }}
+        onMouseEnter={(e) => ((e.currentTarget as HTMLDivElement).style.animationPlayState = "paused")}
+        onMouseLeave={(e) => ((e.currentTarget as HTMLDivElement).style.animationPlayState = "running")}
+      >
+        {[...marqueeImages, ...marqueeImages].map((image, idx) => (
+          <div
+            key={idx}
+            className="inline-block mx-6 flex-shrink-0"
+            style={{
+              // NO rotation during scroll — this is what caused the blur
+              // Rotation only applied on hover via CSS (static, no animation conflict)
+              transition: "transform 0.4s ease",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLDivElement).style.transform =
+                idx % 2 === 0 ? "rotate(3deg) scale(1.03)" : "rotate(-3deg) scale(1.03)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLDivElement).style.transform = "rotate(0deg) scale(1)";
+            }}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="h-48 md:h-72 w-auto rounded-xl object-cover"
               style={{
-                transform: `rotate(${idx % 2 === 0 ? "-5deg" : "5deg"})`,
+                // Ensures image is rendered at its own compositing layer — crisp
+                transform: "translateZ(0)",
+                backfaceVisibility: "hidden",
               }}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="h-32 md:h-64 w-auto object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          ))}
-          {/* Duplicate set for seamless loop */}
-          {marqueeImages.map((image, idx) => (
-            <div
-              key={`duplicate-${idx}`}
-              className={`inline-block mx-4 flex-shrink-0 transition-transform ${
-                idx % 2 == 0 ? "hover:rotate-5" : "hover:-rotate-5"
-              } `}
-              style={{
-                transform: `rotate(${idx % 2 === 0 ? "-5deg" : "5deg"})`,
-              }}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="h-32 md:h-64 w-auto object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          ))}
-        </div>
+              loading="eager"
+              decoding="sync"
+            />
+          </div>
+        ))}
       </div>
 
       <style>{`
         @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
 
-        .animate-marquee {
-          animation: marquee 12s linear infinite;
-        }
-
-        .animate-marquee:hover {
-          animation-play-state: paused;
-        }
-          @media (max-width: 768px) {
-            .animate-marquee {
-              animation: marquee 5s linear infinite;
-            }
+        @media (max-width: 768px) {
+          .overflow-hidden > div {
+            animation-duration: 10s !important;
           }
+        }
       `}</style>
     </div>
   );

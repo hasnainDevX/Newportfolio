@@ -37,7 +37,7 @@ const MyApproach = () => {
       >
         {/* Label cell */}
         <div
-          className="flex flex-col items-center justify-center gap-5 p-10 text-center transition-all duration-700"
+          className="flex flex-col items-center justify-center gap-5 p-10 text-center transition-all duration-700 bg-yellowish!"
           style={{
             backgroundColor: "#f5e8e0",
             borderRight: "1px solid #d6c9b8",
