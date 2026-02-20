@@ -104,7 +104,7 @@ const TestimonialsSection = () => {
                 </p>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-1 h-10 bg-gradient-to-b from-soft-blue to-soft-blue rounded-full" />
+                  <div className="w-1 h-10 bg-gradient-to-b from-soft-beige to-yellowish rounded-full" />
                   <div>
                     <p className="font-semibold text-charcoal text-base uppercase tracking-wide">
                       {testimonial.name}

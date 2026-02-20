@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const PortfolioSection = () => {
   const [currentIdx, setcurrentIdx] = useState(0);
@@ -19,8 +20,11 @@ const PortfolioSection = () => {
   return (
     <div className="py-20 px-4">
       <div className="headings my-16 md:my-28 lg:my-32 space-y-6 px-4 md:px-12">
-        <h1 className="text-[#2A2A2A] text-5xl md:text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl  text-center px-4 md:px-0 max-w-4xl mx-auto " style={{ fontFamily: "Libre Caslon Text, serif" }}>
-          Project <span className="text-[#95B0DD]">Spotlight</span>
+        <h1
+          className="text-[#2A2A2A] text-5xl md:text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl  text-center px-4 md:px-0 max-w-4xl mx-auto "
+          style={{ fontFamily: "Libre Caslon Text, serif" }}
+        >
+          Project <span className="text-">Spotlight</span>
         </h1>
         <h4 className="text-xl px-4 md:px-16 text-center text-[#2A2A2A] max-w-7xl mx-auto">
           Maybe you’ve outgrown the site that once felt perfect. Maybe your
@@ -33,7 +37,7 @@ const PortfolioSection = () => {
         <div className="left-content w-full md:flex-[55%] p-8 sm:p-10 md:p-12 lg:p-16 xl:p-20 space-y-5 sm:space-y-6 md:space-y-7 flex flex-col justify-center">
           <h2 className="text-[26px] sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl font-light text-charcoal leading-tight tracking-tight font-latore">
             Captivating and Converting{" "}
-            <span className="text-soft-blue">Portfolio</span>
+            <span className="text-soft-beige">Portfolio</span>
           </h2>
           <p className="font-light text-[15px] sm:text-base md:text-[17px] lg:text-lg leading-relaxed sm:leading-relaxed md:leading-loose font-lato text-charcoal/75 max-w-xl">
             West & Co. Travel set out to bring a fresh sense of luxury to
@@ -42,15 +46,11 @@ const PortfolioSection = () => {
             sophistication with playful wanderlust
           </p>
           <div className="pt-2 sm:pt-3">
-            <button
-              className="font-medium py-3.5 px-9 sm:py-4 sm:px-11 md:py-4 md:px-12 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] text-white tracking-wide cursor-pointer text-[14px] sm:text-[15px] md:text-base"
-              style={{
-                backgroundColor: "#95B0DD",
-                fontFamily: "Lato, sans-serif",
-              }}
-            >
-              VIEW PORTFOLIO
-            </button>
+            <Link to="/portfolio" className="text-charcoal hover:text-soft-beige">
+              <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+                View Portfolios
+              </button>
+            </Link>
           </div>
         </div>
         <div className="rightimg w-full h-72 sm:h-80 md:h-auto md:flex-[45%] relative overflow-hidden">

@@ -1,7 +1,7 @@
 const ExperienceSection = () => {
   return (
     <div className="min-h-screen w-full px-6 md:px-16 lg:px-24 py-16 flex items-center">
-      <div className="bg-soft-blue/30 w-full max-w-6xl mx-auto p-12 md:p-16 lg:p-20 rounded-3xl relative overflow-hidden">
+      <div className="bg-yellowish w-full max-w-6xl mx-auto p-12 md:p-16 lg:p-20 rounded-3xl relative overflow-hidden">
         {/* Decorative Keyboard Illustration */}
         <div className="absolute top-8 right-8 opacity-20">
           <svg width="200" height="100" viewBox="0 0 200 100" fill="none" stroke="currentColor" strokeWidth="2">
@@ -16,11 +16,11 @@ const ExperienceSection = () => {
         </div>
 
         <div className="relative z-10 space-y-8">
-          <h2 className="text-4xl md:text-5xl  font-black uppercase tracking-tight text-charcoal" style={{ fontFamily: "Libre Caslon Text, serif" }}>
+          <h2 className="text-3xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] uppercase text-charcoal font-playfair">
             Industries I've Worked With
           </h2>
           
-          <p className="text-xl md:text-2xl lg:text-2xl font-light leading-relaxed text-[#2a2a2a] max-w-4xl" style={{ fontFamily: "Georgia, serif" }}>
+          <p className="text-lg md:text-2xl lg:text-2xl font-light leading-relaxed text-[#2a2a2a] max-w-4xl" style={{ fontFamily: "Georgia, serif" }}>
             Fashion designers / social media managers / beauty brands / wedding stationary / coaches / loneliness communities / candle makers / therapists / yoga studios / pet care & so much more
           </p>
 

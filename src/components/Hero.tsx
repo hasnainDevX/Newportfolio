@@ -34,15 +34,9 @@ const Hero = () => {
           to shine
         </h1>
         {/* CTA Button */}
-        <button
-          className="mt-10 px-12 py-4 rounded-full text-sm md:text-base font-medium tracking-wide transition-all shadow-lg shadow-gray-800 hover:opacity-90 cursor-pointer"
-          style={{
-            backgroundColor: "#95B0DD",
-            fontFamily: "Lato, sans-serif",
-            letterSpacing: "0.05em",
-          }}
-        >
-          LET'S CHAT
+        {/* Button */}
+        <button className="px-16 py-3 bg-soft-beige text-charcoal border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+          Let's Talk
         </button>
       </div>
     </div>
