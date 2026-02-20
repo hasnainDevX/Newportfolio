@@ -87,7 +87,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
 
                     {/* WIF Section */}
                     <div
-                      className="rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-soft-beige bg-yellowish/50"
+                      className="rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-soft-beige md:bg-yellowish/50 bg-yellowish/30"
                     >
                       <h3
                         className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] sm:tracking-[0.15em] mb-2 sm:mb-3 text-charcoal"
@@ -119,7 +119,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
       </div>
 
       {/* Scroll Indicator (Mobile Only) */}
-      {/* <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-2">
+      <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-2">
         {cards.map((_, i) => (
           <div
             key={i}
@@ -130,7 +130,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
             }`}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 const ExperienceSection = () => {
   return (
     <div className="min-h-screen w-full px-6 md:px-16 lg:px-24 py-16 flex items-center">
-      <div className="bg-yellowish w-full max-w-6xl mx-auto p-12 md:p-16 lg:p-20 rounded-3xl relative overflow-hidden">
+      <div className="md:bg-yellowish bg-yellowish/50 w-full max-w-6xl mx-auto p-12 md:p-16 lg:p-20 rounded-3xl relative overflow-hidden">
         {/* Decorative Keyboard Illustration */}
         <div className="absolute top-8 right-8 opacity-20">
           <svg width="200" height="100" viewBox="0 0 200 100" fill="none" stroke="currentColor" strokeWidth="2">

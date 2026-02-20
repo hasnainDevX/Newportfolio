@@ -60,22 +60,18 @@ const Navbar = () => {
           })}
 
           {/* CTA Button */}
-          <Link to="/enquiry">
-            <button
-              className="px-6 py-2.5 rounded-full text-sm font-medium tracking-wide text-white transition-all hover:opacity-90 whitespace-nowrap cursor-pointer"
-              style={{ backgroundColor: "#95B0DD" }}
-            >
-              ENQUIRY FORM
-            </button>
-          </Link>
+          {/* <Link to="/enquiry"> */}
+          <button className="px-12 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+            Enquiry 
+          </button>
+          {/* </Link> */}
 
           {/* Instagram Icon */}
           <a
             href="https://instagram.com/hasnainwebworks"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-9 h-9 rounded-full flex items-center justify-center cursor-pointer hover:opacity-70 transition flex-shrink-0"
-            style={{ backgroundColor: "#95B0DD" }}
+            className="w-9 h-9 rounded-full flex items-center justify-center cursor-pointer hover:opacity-70 transition flex-shrink-0 bg-charcoal"
           >
             <svg
               className="w-5 h-5 text-white"
@@ -89,7 +85,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="lg:hidden fixed top-4 left-4 right-4 z-50 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-full shadow-md">
+      <nav className="lg:hidden fixed top-4 left-4 right-4 z-50 bg-white/95 backdrop-blur-sm px-6 py-4  shadow-md">
         <div className="flex justify-between items-center">
           <Link
             to="/"
@@ -141,11 +137,8 @@ const Navbar = () => {
               to="/enquiry"
               className="text-sm font-medium tracking-wider text-gray-800 hover:opacity-80 transition"
             >
-              <button
-                className="w-full px-6 py-2.5 rounded-full text-sm font-medium tracking-wide text-white"
-                style={{ backgroundColor: "#95B0DD" }}
-              >
-                ENQUIRY FORM
+              <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+                Enquiry Form
               </button>
             </Link>
           </div>

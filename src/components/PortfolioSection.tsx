@@ -24,9 +24,9 @@ const PortfolioSection = () => {
           className="text-[#2A2A2A] text-5xl md:text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl  text-center px-4 md:px-0 max-w-4xl mx-auto "
           style={{ fontFamily: "Libre Caslon Text, serif" }}
         >
-          Project <span className="text-">Spotlight</span>
+          Project <span className="">Spotlight</span>
         </h1>
-        <h4 className="text-xl px-4 md:px-16 text-center text-[#2A2A2A] max-w-7xl mx-auto">
+        <h4 className="text-sm md:text-xl px-4 md:px-16 text-center text-[#2A2A2A] max-w-7xl mx-auto">
           Maybe you’ve outgrown the site that once felt perfect. Maybe your
           brand’s next chapter is bigger than the online space it currently sits
           in. Or perhaps you’re tired of choosing between beauty or performance,
@@ -37,7 +37,7 @@ const PortfolioSection = () => {
         <div className="left-content w-full md:flex-[55%] p-8 sm:p-10 md:p-12 lg:p-16 xl:p-20 space-y-5 sm:space-y-6 md:space-y-7 flex flex-col justify-center">
           <h2 className="text-[26px] sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl font-light text-charcoal leading-tight tracking-tight font-latore">
             Captivating and Converting{" "}
-            <span className="text-soft-beige">Portfolio</span>
+            <span className="text-gold">Portfolio</span>
           </h2>
           <p className="font-light text-[15px] sm:text-base md:text-[17px] lg:text-lg leading-relaxed sm:leading-relaxed md:leading-loose font-lato text-charcoal/75 max-w-xl">
             West & Co. Travel set out to bring a fresh sense of luxury to

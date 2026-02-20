@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
       {/* Title - Will be pinned */}
       <div ref={headerRef} className="text-center mb-32">
         <h2 className="text-5xl md:text-6xl lg:text-7xl mb-4" style={{ fontFamily: "Libre Caslon Text, serif" }}>
-          My favourite <span className="text-soft-blue">quotes</span>
+          My favourite <span className="">quotes</span>
         </h2>
         <p className="text-xl text-gray-600">from clients</p>
       </div>
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
               <div className="relative p-8 md:p-12">
                 <div className="mb-6">
                   <svg
-                    className="w-10 h-10 text-soft-blue opacity-70"
+                    className="w-10 h-10 text-gold opacity-70"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
