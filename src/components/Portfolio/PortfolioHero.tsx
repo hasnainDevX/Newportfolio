@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 const PortfolioHero = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat relative "
+      className="min-h-screen bg-cover bg-center bg-no-repeat relative"
       style={{
         backgroundImage:
           "url('https://belle-creative.co.uk/wp-content/uploads/2025/07/portfolio-images-02-copy.png')",
@@ -11,38 +11,53 @@ const PortfolioHero = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Optional overlay to darken image slightly */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      {/* Warm overlay */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: "rgba(30,20,10,0.55)" }}
+      />
 
       <header className="relative z-50">
         <Navbar />
       </header>
 
-      {/* Content  */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-5 sm:px-6 md:px-8 lg:px-6 py-24 sm:py-32 md:py-40 lg:py-52 xl:py-64 max-w-6xl mx-auto min-h-screen">
-        {/* Small Label */}
-        <div className="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-6 sm:mb-7 md:mb-8 opacity-90">
-          Website Design and Development Packages
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 sm:px-10 md:px-16 min-h-screen max-w-5xl mx-auto py-6 md:py-12">
+        {/* Heading */}
+        <div>
+          <h1 className="font-normal leading-[1.12] font-libre-caslon text-3xl sm:text-4xl md:text-6xl max-w-5xl text-white uppercase md:mt-24">
+            Your brand story is highly personal{" "}
+            <em style={{ color: "#e8dfd5", fontStyle: "italic" }}>
+              That's why my process always starts with brand strategy.
+            </em>
+          </h1>
         </div>
+        {/* Gold divider */}
+        <div
+          className="w-10 h-px mb-10"
+          style={{ backgroundColor: "#b5973a" }}
+        />
 
-        {/* Main Heading */}
-        <h1
-          className="text-[44px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0"
-          style={{ fontFamily: "Libre Caslon Text, serif" }}
-        >
-         Your BRAND STORY is highly personal. That's why my process always starts with brand STRATEGY.
-        </h1>
-
-        {/* CTA Button */}
+        {/* CTA — light border so it reads on dark bg */}
         <button
-          className="mt-10 px-12 py-4  text-sm md:text-base font-medium tracking-wide transition-all shadow-lg shadow-gray-800 hover:opacity-90 cursor-pointer"
+          className="px-16 py-3 rounded-xl text-sm tracking-widest uppercase font-sans transition-all duration-300"
           style={{
-            backgroundColor: "#95B0DD",
-            fontFamily: "Lato, sans-serif",
-            letterSpacing: "0.05em",
+            backgroundColor: "transparent",
+            border: "1px solid #e8dfd5",
+            color: "#faf8f4",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.backgroundColor =
+              "#e8dfd5";
+            (e.currentTarget as HTMLButtonElement).style.color = "#2a2a2a";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.backgroundColor =
+              "transparent";
+            (e.currentTarget as HTMLButtonElement).style.color = "#faf8f4";
           }}
         >
-          LET'S CHAT
+          Let's Chat
         </button>
       </div>
     </div>
