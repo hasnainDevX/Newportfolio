@@ -6,6 +6,7 @@ import MarqueeShowcase from '@/components/TextMarquee'
 import OurProcess from '@/components/OurProcess'
 import Cta from '@/components/Cta'
 import Footer from '@/components/Footer'
+import FAQSection from '@/components/FAQ'
 
 const Packages = () => {
   return (
@@ -13,7 +14,8 @@ const Packages = () => {
         <PackagesHero/>
         <PackagesAbout/>
         <PackagesSection/>
-        <TestimonialsSection/>
+        {/* <TestimonialsSection/> */}
+        <FAQSection/>
         <MarqueeShowcase data={["DEVELOPMENT  MADE  SIMPLE / ✦ /  DESIGN  &  DEVELOPMENT"]} speed={20}/>
         <OurProcess/>
         <Cta/>
