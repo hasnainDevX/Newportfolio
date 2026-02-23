@@ -97,7 +97,7 @@ const Navbar = () => {
 
       {/* ── Mobile ── */}
       <nav
-        className="lg:hidden fixed top-4 left-4 right-4 z-50 px-5 py-4 rounded-2xl bg-cream-bg/80"
+        className="lg:hidden fixed top-4 left-4 right-4 z-50 px-5 py-4 rounded-2xl bg-cream-bg/90"
         style={{
           // backgroundColor: "#f5f2eb",
           border: "1px solid #e0d6c8",
