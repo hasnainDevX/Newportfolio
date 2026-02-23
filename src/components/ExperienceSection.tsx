@@ -1,120 +1,188 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+"use client";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
-  const leftNavItems = [
-    { name: "HOME", path: "/" },
-    { name: "ABOUT US", path: "/about-us" },
-    { name: "PORTFOLIO", path: "/portfolio" },
-  ];
-  const rightNavItems = [{ name: "PACKAGES", path: "/packages" }];
+const industries = [
+  "Fashion Designers",
+  "Beauty Brands",
+  "Wedding Stationery",
+  "Life Coaches",
+  "Yoga Studios",
+  "Candle Makers",
+  "Therapists",
+  "Social Media Managers",
+  "Pet Care",
+  "Loneliness Communities",
+  "Interior Designers",
+  "Photographers",
+];
 
-  // Shared link class — consistent weight + tracking everywhere
-  const linkCls = (path: string) =>
-    `text-sm font-normal tracking-widest transition-opacity whitespace-nowrap ${
-      location.pathname === path
-        ? "opacity-40 cursor-not-allowed pointer-events-none"
-        : "opacity-100 hover:opacity-60"
-    }`;
+const ExperienceSection = () => {
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 },
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <>
-      {/* ── Desktop ── */}
-      <nav className="hidden lg:grid fixed top-8 left-1/2 -translate-x-1/2 z-50 bg-white/95 backdrop-blur-lg px-8 py-4 rounded-full shadow-md grid-cols-[1fr_auto_1fr] gap-8 items-center">
+    <section
+      ref={sectionRef}
+      className="w-full bg-slate-50 px-6 md:px-16 lg:px-24 py-24 md:py-32 overflow-hidden"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* ── Two-col layout on desktop, stacked on mobile ── */}
+        <div className="flex flex-col lg:flex-row lg:items-center gap-16 lg:gap-24">
+          {/* Left — sticky heading column */}
+          <div className="lg:w-2/5 lg:sticky lg:top-32">
+            {/* Eyebrow */}
+            <div
+              className="transition-all duration-700"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(24px)",
+                transitionDelay: "0ms",
+              }}
+            >
+              <p className="text-xs tracking-[0.4em] uppercase text-[#b5973a] font-sans mb-6">
+                Experience
+              </p>
+            </div>
 
-        {/* Left */}
-        <div className="flex gap-8 justify-end items-center mr-4">
-          {leftNavItems.map((item, idx) => (
-            <Link key={idx} to={item.path} className={linkCls(item.path)}>
-              {item.name}
-            </Link>
-          ))}
-        </div>
-
-        {/* Centre logo */}
-        <Link
-          to="/"
-          className="text-2xl tracking-wide text-center whitespace-nowrap px-8 font-serif hover:opacity-80 transition"
-        >
-          Hasnain Webworks
-        </Link>
-
-        {/* Right */}
-        <div className="flex gap-8 items-center">
-          {rightNavItems.map((item, idx) => (
-            <Link key={idx} to={item.path} className={linkCls(item.path)}>
-              {item.name}
-            </Link>
-          ))}
-
-          <Link to="/enquiry">
-            <button className="px-12 py-3 bg-soft-beige border border-charcoal rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 font-normal">
-              Enquiry
-            </button>
-          </Link>
-
-          <a
-            href="https://instagram.com/hasnainwebworks"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-9 h-9 rounded-full flex items-center justify-center cursor-pointer hover:opacity-70 transition flex-shrink-0 bg-charcoal"
-          >
-            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-            </svg>
-          </a>
-        </div>
-      </nav>
-
-      {/* ── Mobile ── */}
-      <nav className="lg:hidden fixed top-4 left-4 right-4 z-50 bg-white/95 backdrop-blur-sm px-6 py-4 shadow-md rounded-2xl">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="text-lg font-serif tracking-wide hover:opacity-80 transition">
-            Hasnain Webworks
-          </Link>
-
-          {/* Hamburger */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="w-8 h-8 flex flex-col justify-center items-center gap-1.5"
-            aria-label="Toggle menu"
-          >
-            <span className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${isOpen ? "opacity-0" : ""}`} />
-            <span className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        <div
-          className="overflow-hidden transition-all duration-400 ease-in-out"
-          style={{ maxHeight: isOpen ? "400px" : "0px" }}
-        >
-          <div className="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-4">
-            {[...leftNavItems, ...rightNavItems].map((item, idx) => (
-              <Link
-                key={idx}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={linkCls(item.path)}
+            {/* Heading */}
+            <div
+              className="transition-all duration-700"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(24px)",
+                transitionDelay: "100ms",
+              }}
+            >
+              <h2
+                className="font-normal leading-[1.1] text-[#1a1a1a]"
+                style={{
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontSize: "clamp(2.8rem, 5vw, 4.5rem)",
+                }}
               >
-                {item.name}
-              </Link>
-            ))}
+                Industries I've Worked With
+              </h2>
+            </div>
 
-            <Link to="/enquiry" onClick={() => setIsOpen(false)}>
-              <button className="mt-2 px-16 py-3 bg-soft-beige border border-charcoal rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 font-normal w-full">
-                Enquiry Form
-              </button>
-            </Link>
+            {/* Thin rule */}
+            <div
+              className="transition-all duration-700 mt-8"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? "scaleX(1)" : "scaleX(0)",
+                transformOrigin: "left",
+                transitionDelay: "200ms",
+                height: "1px",
+                width: "48px",
+                backgroundColor: "#d6c9b8",
+              }}
+            />
+
+            {/* Subtitle */}
+            <div
+              className="transition-all duration-700 mt-6"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(16px)",
+                transitionDelay: "300ms",
+              }}
+            >
+              <p className="text-charcoal font-sans leading-relaxed max-w-xs">
+                From solopreneurs to established studios — if you have a vision,
+                we know how to bring it to life online.
+              </p>
+            </div>
+
+            {/* CTA */}
+            <div
+              className="transition-all duration-700 mt-10"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(16px)",
+                transitionDelay: "400ms",
+              }}
+            >
+              <Link to="/portfolio">
+                <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
+                  See Portfolio
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Right — tag cloud with staggered reveal */}
+          <div className="lg:w-3/5">
+            <div className="flex flex-wrap gap-3">
+              {industries.map((industry, idx) => (
+                <div
+                  key={idx}
+                  className="transition-all duration-600 group"
+                  style={{
+                    opacity: visible ? 1 : 0,
+                    transform: visible ? "translateY(0)" : "translateY(20px)",
+                    transitionDelay: `${300 + idx * 60}ms`,
+                    transitionDuration: "600ms",
+                  }}
+                >
+                  <span
+                    className="inline-flex items-center gap-2 px-5 py-3 border font-sans text-sm cursor-default select-none
+                      transition-all duration-300
+                      hover:border-[#1a1a1a] hover:bg-gold hover:text-white!"
+                    style={{
+                      borderColor: "#d6c9b8",
+                      color: "#3a2a2a",
+                      borderRadius: "100px",
+                    }}
+                  >
+                    {/* Small diamond accent */}
+                    <span
+                      className="w-1.5 h-1.5 rounded-full shrink-0 transition-colors duration-300 group-hover:bg-white"
+                      style={{ backgroundColor: "#b5973a" }}
+                    />
+                    {industry}
+                  </span>
+                </div>
+              ))}
+
+              {/* "& more" pill */}
+              <div
+                className="transition-all duration-600"
+                style={{
+                  opacity: visible ? 1 : 0,
+                  transform: visible ? "translateY(0)" : "translateY(20px)",
+                  transitionDelay: `${300 + industries.length * 60}ms`,
+                  transitionDuration: "600ms",
+                }}
+              >
+                <span
+                  className="inline-flex items-center px-5 py-3 font-sans text-sm italic"
+                  style={{ color: "#b5973a", borderRadius: "100px" }}
+                >
+                  & so much more
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </>
+      </div>
+    </section>
   );
 };
 
-export default Navbar;
+export default ExperienceSection;

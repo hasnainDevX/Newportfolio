@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
             <div className="relative">
               {/* Organic shaped background */}
               <div
-                className="absolute inset-0 bg-white text-black rounded-[40px] shadow-2xl"
+                className="absolute inset-0 bg-cream-bg/30 text-black rounded-[40px] shadow-2xl"
                 style={{
                   clipPath:
                     "polygon(3% 8%, 8% 2%, 92% 2%, 97% 8%, 97% 92%, 92% 97%, 8% 97%, 3% 92%)",
@@ -104,7 +104,7 @@ const TestimonialsSection = () => {
                 </p>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-1 h-10 bg-gradient-to-b from-soft-beige to-yellowish rounded-full" />
+                  <div className="w-1 h-10 bg-gradient-to-b from-gold to-yellowish rounded-full" />
                   <div>
                     <p className="font-semibold text-charcoal text-base uppercase tracking-wide">
                       {testimonial.name}

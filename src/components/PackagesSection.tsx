@@ -5,15 +5,15 @@ const PackagesSection = () => {
       <hr className="border-t border-gray-500" />
       <div className="package1 flex flex-col lg:flex-row w-full h-auto gap-8 lg:gap-0 py-16">
         {/* Left Decorative Part */}
-        <div className="leftdecor flex-[0_0_15%] lg:py-16 py-8">
-            <img className="w-full h-full object-cover" src="https://belle-creative.co.uk/wp-content/uploads/2025/06/belle-creative-09-1-scaled.webp" alt="" />
+        <div className="leftdecor hidden lg:flex flex-[0_0_15%] lg:py-16 py-8">
+            <img className="w-full h-full object-cover" src="https://www.belle-creative.co.uk/cdn/shop/files/bespoke-web-development-01-scaled.webp?v=1767185138" alt="" />
         </div>
 
         {/* Center Image Part */}
-        <div className="centerimage flex-[0_0_35%] flex items-center justify-center bg-[#FFFCF9] p-8 lg:p-16">
+        <div className="centerimage flex-[0_0_35%] flex items-center justify-center p-8 lg:p-16">
           <div className="w-full max-w-md">
             <img
-              src="https://belle-creative.co.uk/wp-content/uploads/2025/07/jewelry-website-design-uk-05-scaled.webp"
+              src="https://www.belle-creative.co.uk/cdn/shop/files/shopify-site-design-25.webp?v=1767104004"
               alt="Brand Design Mockup"
               className="w-full h-auto"
             />
@@ -21,7 +21,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Right Text Part */}
-        <div className="textpart flex-[0_0_60%] p-8 lg:p-16 flex flex-col justify-center">
+        <div className="textpart flex-[0_0_50%] p-8 lg:p-16 flex flex-col justify-center">
           <div className="max-w-xl">
             {/* Number */}
             <p className="text-sm font-light mb-4 tracking-wider">01</p>
@@ -52,7 +52,7 @@ const PackagesSection = () => {
               </p>
             </div>
 
-            <div className="w-full h-px bg-gray-300 mb-8"></div>
+            <div className="w-full h-px mb-8"></div>
 
             {/* Deliverables Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 mb-10">
@@ -120,10 +120,10 @@ const PackagesSection = () => {
         </div>
 
         {/* Center Image Part */}
-        <div className="centerpart flex-1 flex items-center justify-center bg-[#FFFCF9]">
+        <div className="centerpart flex-1 flex items-center justify-center ">
           <div className="w-full max-w-md">
             <img
-              src="https://belle-creative.co.uk/wp-content/uploads/2025/09/framed-slideshow.gif"
+              src="https://www.belle-creative.co.uk/cdn/shop/files/Web-Design-Cheshire-18-1-scaled.webp?v=1767366872"
               alt="Web Design Mockup"
               className="w-full h-auto"
             />
@@ -131,7 +131,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Right Details Part */}
-        <div className="rightpart flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#FFFCF9]">
+        <div className="rightpart flex-1 p-8 lg:p-16 flex flex-col justify-center ">
           <div className="max-w-md">
             {/* Timeline and Investment */}
             <div className="mb-8">
@@ -144,7 +144,7 @@ const PackagesSection = () => {
               </p>
             </div>
 
-            <div className="w-full h-px bg-gray-300 mb-8"></div>
+            <div className="w-full h-px mb-8"></div>
 
             {/* Deliverables List */}
             <div className="space-y-4 mb-10">
@@ -180,10 +180,10 @@ const PackagesSection = () => {
       {/* Package 3 - VIP Design Day */}
       <div className="package3 flex flex-col lg:flex-row w-full h-auto gap-8 lg:gap-0 py-16">
         {/* Left Image Part */}
-        <div className="leftimage flex-1 p-8 lg:p-16 flex items-center justify-center bg-[#FFFCF9]">
+        <div className="leftimage flex-1 p-8 lg:p-16 flex items-center justify-center ">
           <div className="w-full max-w-md">
             <img
-              src="https://images.unsplash.com/photo-1490136001793-14ccbc24fbac?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://www.belle-creative.co.uk/cdn/shop/files/Web-Design-Cheshire-11-scaled.webp?v=1767185279&width=400"
               alt="VIP Design Day"
               className="w-full h-auto"
             />
@@ -191,7 +191,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Center Content Part */}
-        <div className="centercontent flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#FFFCF9]">
+        <div className="centercontent flex-1 p-8 lg:p-16 flex flex-col justify-center ">
           <div className="max-w-lg">
             {/* Number */}
             <p className="text-sm font-light mb-4 tracking-wider">03</p>
@@ -215,7 +215,7 @@ const PackagesSection = () => {
               session—so you can finally check them off and move forward.
             </p>
 
-            <div className="w-full h-px bg-gray-300 mb-8"></div>
+            <div className="w-full h-px  mb-8"></div>
 
             {/* Why VIP Day Section */}
             <h3 className="text-xs tracking-widest uppercase mb-6">
@@ -311,7 +311,7 @@ const PackagesSection = () => {
         </div>
 
         {/* Right Sidebar Part */}
-        <div className="rightsidebar flex-1 p-8 lg:p-16 flex flex-col justify-center bg-[#FFFCF9] lg:border-l border-gray-300">
+        <div className="rightsidebar flex-1 p-8 lg:p-16 flex flex-col justify-center lg:border-l border-gray-300">
           <div className="max-w-md">
             {/* Timeline and Investment */}
             <div className="mb-8">

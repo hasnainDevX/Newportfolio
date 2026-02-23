@@ -82,9 +82,9 @@ const PortfoliosSection = () => {
     <div className="w-full bg-[#FAFAF8]">
 
       {/* Header */}
-      <div className="px-6 py-24 md:py-32 text-center bg-charcoal text-white">
+      <div className="px-6 py-24 md:py-32 text-center">
         <p
-          className="text-xs tracking-[0.4em] uppercase mb-6 font-light text-white/50"
+          className="text-xs tracking-[0.4em] uppercase mb-6 text-charcoal"
           style={{ fontFamily: "sans-serif" }}
         >
           EXPLORE MY RECENT WORK
@@ -98,7 +98,7 @@ const PortfoliosSection = () => {
       </div>
 
       {/* Portfolio Rows */}
-      <div className="w-full divide-y divide-[#E8E4DF]">
+      <div className="w-full divide-y divide-[#E8E4DF] border-t border-[#E8E4DF]">
         {portfolioData.map((item, idx) => (
           <div
             key={idx}

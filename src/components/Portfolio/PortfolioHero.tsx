@@ -1,67 +1,45 @@
+import AnnouncementBar from "../AnnouncementBar";
 import Navbar from "../Navbar";
+import image from "../../assets/portfolio2.webp";
 
-const PortfolioHero = () => {
+const EnquiryHero = () => {
   return (
-    <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat relative"
-      style={{
-        backgroundImage:
-          "url('https://belle-creative.co.uk/wp-content/uploads/2025/07/portfolio-images-02-copy.png')",
-        backgroundColor: "#9CA086",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      {/* Warm overlay */}
-      <div
-        className="absolute inset-0"
-        style={{ backgroundColor: "rgba(30,20,10,0.55)" }}
-      />
+    <div className="w-full">
 
-      <header className="relative z-50">
-        <Navbar />
-      </header>
+      <AnnouncementBar/>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 sm:px-10 md:px-16 min-h-screen max-w-5xl mx-auto py-6 md:py-12">
-        {/* Heading */}
-        <div>
-          <h1 className="font-normal leading-[1.12] font-libre-caslon text-3xl sm:text-4xl md:text-6xl max-w-5xl text-white uppercase md:mt-24">
-            Your brand story is highly personal{" "}
-            <em style={{ color: "#e8dfd5", fontStyle: "italic" }}>
-              That's why my process always starts with brand strategy.
-            </em>
-          </h1>
-        </div>
-        {/* Gold divider */}
-        <div
-          className="w-10 h-px mb-10"
-          style={{ backgroundColor: "#b5973a" }}
+      {/* ── Navbar ── */}
+      <Navbar />
+
+      {/* ── Hero image ── */}
+      <div className="relative w-full overflow-hidden" style={{ height: "80vh" }}>
+        <img
+          src={image}
+          alt="Enquiry hero"
+          className="w-full h-full object-cover object-center"
+          style={{ transform: "translateZ(0)" }}
         />
 
-        {/* CTA — light border so it reads on dark bg */}
-        <button
-          className="px-16 py-3 rounded-xl text-sm tracking-widest uppercase font-sans transition-all duration-300"
-          style={{
-            backgroundColor: "transparent",
-            border: "1px solid #e8dfd5",
-            color: "#faf8f4",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-              "#e8dfd5";
-            (e.currentTarget as HTMLButtonElement).style.color = "#2a2a2a";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-              "transparent";
-            (e.currentTarget as HTMLButtonElement).style.color = "#faf8f4";
-          }}
-        >
-          Let's Chat
-        </button>
+        {/* ── Scrolling text overlay at bottom ── */}
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
+          <div
+            className="flex whitespace-nowrap"
+            style={{ animation: "heromarquee 18s linear infinite" }}
+          >
+            {Array.from({ length: 4 }).map((_, i) => (
+              <span
+                key={i}
+                className="shrink-0 text-soft-beige text-6xl md:text-8xl lg:text-9xl font-normal leading-none mx-8"
+                style={{ fontFamily: '"Libre Caslon Text", serif' }}
+              >
+                Captivating and Converting Portfolio &nbsp;~&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default PortfolioHero;
+export default EnquiryHero;

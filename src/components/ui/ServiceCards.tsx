@@ -119,7 +119,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
       </div>
 
       {/* Scroll Indicator (Mobile Only) */}
-      <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-2">
+      {/* <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-2">
         {cards.map((_, i) => (
           <div
             key={i}
@@ -130,7 +130,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
             }`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
