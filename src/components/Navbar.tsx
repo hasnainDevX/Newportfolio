@@ -23,9 +23,9 @@ const Navbar = () => {
     <>
       {/* ── Desktop ── */}
       <nav
-        className="hidden lg:grid fixed top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-md px-8 py-3.5 rounded-full grid-cols-[1fr_auto_1fr] gap-8 items-center"
+        className="hidden lg:grid fixed top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-md px-8 py-3.5 rounded-full grid-cols-[1fr_auto_1fr] gap-8 items-center bg-cream-bg/80"
         style={{
-          backgroundColor: "#f5f2eb",
+          // backgroundColor: "#f5f2eb",
           border: "1px solid #e0d6c8",
           boxShadow: "0 4px 24px rgba(181,151,58,0.08)",
         }}
@@ -97,9 +97,9 @@ const Navbar = () => {
 
       {/* ── Mobile ── */}
       <nav
-        className="lg:hidden fixed top-4 left-4 right-4 z-50 px-5 py-4 rounded-2xl"
+        className="lg:hidden fixed top-4 left-4 right-4 z-50 px-5 py-4 rounded-2xl bg-cream-bg/80"
         style={{
-          backgroundColor: "#f5f2eb",
+          // backgroundColor: "#f5f2eb",
           border: "1px solid #e0d6c8",
           boxShadow: "0 4px 20px rgba(181,151,58,0.08)",
         }}
