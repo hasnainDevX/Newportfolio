@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
             <div className="relative">
               {/* Organic shaped background */}
               <div
-                className="absolute inset-0 md:bg-cream-bg/30 bg-yellowish text-black rounded-[40px] shadow-2xl"
+                className="absolute inset-0 md:bg-cream-bg/30 bg-cream-bg text-black rounded-[40px] shadow-2xl"
                 style={{
                   clipPath:
                     "polygon(3% 8%, 8% 2%, 92% 2%, 97% 8%, 97% 92%, 92% 97%, 8% 97%, 3% 92%)",
