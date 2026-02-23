@@ -1,7 +1,7 @@
 import PackagesHero from '@/components/PackagesHero'
 import PackagesSection from '@/components/PackagesSection'
 import PackagesAbout from '@/components/PackagesAbout'
-import TestimonialsSection from '@/components/TestimonialSection'
+// import TestimonialsSection from '@/components/TestimonialSection'
 import MarqueeShowcase from '@/components/TextMarquee'
 import OurProcess from '@/components/OurProcess'
 import Cta from '@/components/Cta'
