@@ -1,9 +1,9 @@
-const announcementText = "Download our 2026 Services & Pricing Guide";
+const announcementText = "Now Booking";
 const AnnouncementBar = () => {
   return (
     <div>
       {/* ── Announcement bar ── */}
-      <div className="w-full bg-charcoal overflow-hidden py-2.5">
+      <div className="w-full bg-charcoal overflow-hidden py-1">
         <div
           className="flex whitespace-nowrap"
           style={{ animation: "announcebar 22s linear infinite" }}

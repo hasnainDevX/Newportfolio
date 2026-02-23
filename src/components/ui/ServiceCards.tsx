@@ -102,10 +102,10 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-3 md:pt-4">
                       {/* Button */}
-                      <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+                      <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
                         Get Started
                       </button>
-                      <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+                      <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
                         Learn More
                       </button>
                       
@@ -117,20 +117,6 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
           ))}
         </div>
       </div>
-
-      {/* Scroll Indicator (Mobile Only) */}
-      {/* <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-2">
-        {cards.map((_, i) => (
-          <div
-            key={i}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === currentIndex 
-                ? 'w-8 bg-[#95B0DD]' 
-                : 'w-2 bg-[#95B0DD]/30'
-            }`}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };

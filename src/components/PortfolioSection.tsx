@@ -47,7 +47,7 @@ const PortfolioSection = () => {
           </p>
           <div className="pt-2 sm:pt-3">
             <Link to="/portfolio" className="text-charcoal hover:text-soft-beige">
-              <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+              <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
                 View Portfolios
               </button>
             </Link>

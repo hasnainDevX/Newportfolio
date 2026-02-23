@@ -54,7 +54,7 @@ const PackagesHero = () => {
             style={{ backgroundColor: "#b5973a" }}
           />
 
-          <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+          <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
             View Packages
           </button>
         </div>

@@ -33,7 +33,7 @@ const MobileCell = ({ item, idx, visible }: { item: Approach; idx: number; visib
       {/* Header row — always visible, tap to toggle */}
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between w-full px-8 py-6 text-left bg-white"
+        className="flex items-center justify-between w-full px-8 py-6 text-left bg-white cursor-pointer"
       >
         <span
           className="font-light leading-none"

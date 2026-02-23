@@ -71,7 +71,7 @@ const AboutHero = () => {
             feels like home and keeps paying off for years to come.
           </h4>
           {/* Button */}
-          <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+          <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
             Apply
           </button>
         </div>

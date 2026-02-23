@@ -59,7 +59,7 @@ const Navbar = () => {
           {/* Enquiry CTA — gold accent */}
           <Link to="/enquiry">
             <button
-              className="px-7 py-2.5 rounded-full text-sm tracking-widest uppercase font-normal transition-all duration-300"
+              className="px-7 py-2.5 rounded-full text-sm tracking-widest uppercase font-normal transition-all duration-300 cursor-pointer"
               style={{
                 backgroundColor: "#b5973a",
                 color: "#fff",
@@ -116,7 +116,7 @@ const Navbar = () => {
           {/* Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="w-8 h-8 flex flex-col justify-center items-center gap-1.5"
+            className="w-8 h-8 flex flex-col justify-center items-center gap-1.5 cursor-pointer transition-opacity hover:opacity-70"
             aria-label="Toggle menu"
           >
             <span
@@ -165,7 +165,7 @@ const Navbar = () => {
 
             <Link to="/enquiry" onClick={() => setIsOpen(false)} className="mt-2">
               <button
-                className="w-full py-3 rounded-xl text-sm tracking-widest uppercase font-normal transition-all duration-300"
+                className="w-full py-3 rounded-xl text-sm tracking-widest uppercase font-normal transition-all duration-300 cursor-pointer"
                 style={{ backgroundColor: "#b5973a", color: "#fff", border: "1px solid #b5973a" }}
               >
                 Enquiry Form
