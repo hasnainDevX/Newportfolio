@@ -1,10 +1,9 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
-import portfolio3 from "../../assets/image2.png";
-import portfolio1 from "../../assets/project1.png";
-import portfolio from "../../assets/portfolio1.webp";
-import portfolio2 from "../../assets/portfolio2.webp";
+import portfolio1 from "../../assets/allingoodhans1.png";
+import portfolio2 from "../../assets/maceysmethod3.png";
+import portfolio3 from "../../assets/telecomsite1.jpeg";
+import portfolio4 from "../../assets/noblesite1.jpeg";
+// import portfolio5 from "../../assets/nnsite1.jpeg";
 
 interface Portfolio {
   id: number;
@@ -18,34 +17,34 @@ interface Portfolio {
 const portfolioData: Portfolio[] = [
   {
     id: 1,
-    title: "LUXURY BEAUTY STUDIO",
+    title: "All In Good Hans",
     category: "BRAND + WEBSITE DESIGN",
-    image: portfolio,
-    desc: "A high-end beauty studio specializing in skincare and makeup services, offering a luxurious experience for clients seeking top-tier beauty treatments.",
-    year: "2024",
+    image: portfolio1,
+    desc: "A strategic website build for a UK-based Virtual Assistant supporting overwhelmed entrepreneurs with inbox management, systems, and client coordination. The design reflects the brand’s calm, organised approach — positioning her as the dependable “behind-the-scenes” partner who brings structure to business chaos.",
+    year: "2025",
   },
   {
     id: 2,
-    title: "ARTISAN COFFEE COLLECTIVE",
-    category: "BRAND IDENTITY + PACKAGING",
+    title: "Macey's Method",
+    category: "WEBSITE DESIGN + DEVELOPMENT",
     image: portfolio2,
-    desc: "A boutique coffee brand focused on ethically sourced beans and artisanal roasting techniques, creating a unique sensory experience for coffee enthusiasts.",
-    year: "2024",
+    desc: "A refined, service-led website for a Virtual Assistant business focused on operational support and streamlined workflows. The structure prioritises clarity, service breakdown, and trust-building — helping potential clients quickly understand the value of outsourcing their admin.",
+    year: "2025",
   },
   {
     id: 3,
-    title: "MODERN WELLNESS RETREAT",
-    category: "BRAND + DIGITAL EXPERIENCE",
+    title: "Go Quality Networks",
+    category: "BRAND + WEBSITE DEVELOPMENT",
     image: portfolio3,
-    desc: "A contemporary wellness retreat offering holistic health services, combining modern design with nature-inspired elements.",
+    desc: "A Houston-based telecom website built to present high-speed internet and connectivity solutions with clarity and authority. The platform is structured to simplify provider comparison, communicate coverage and reliability, and guide users toward confident service decisions.",
     year: "2023",
   },
   {
     id: 4,
-    title: "EDITORIAL FASHION HOUSE",
-    category: "BRAND STRATEGY + WEBSITE",
-    image: portfolio1,
-    desc: "A cutting-edge fashion brand that merges editorial aesthetics with high fashion, creating a bold and innovative identity that resonates with trendsetters and fashion enthusiasts.",
+    title: "Noble Cleaning Solutions",
+    category: "BRAND STRATEGY + WEBSITE DESIGN + DEVELOPMENT",
+    image: portfolio4,
+    desc: "A functional service website developed for a Vancouver-based cleaning business. The platform streamlines the booking process while clearly presenting residential and commercial services in a structured, easy-to-navigate layout.",
     year: "2023",
   },
 ];
@@ -127,7 +126,7 @@ const PortfoliosSection = () => {
 
                   {/* Title */}
                   <h2
-                    className="text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.05] tracking-tight text-[#1A1A1A] font-normal"
+                    className="text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.05] tracking-tight text-[#1A1A1A] font-normal uppercase"
                     style={{ fontFamily: '"Libre Caslon Text", serif' }}
                   >
                     {item.title}
@@ -138,14 +137,14 @@ const PortfoliosSection = () => {
 
                   {/* Description */}
                   <p
-                    className="text-[15px] leading-relaxed text-[#6B6560] max-w-sm"
+                    className="text-sm md:text-base leading-relaxed text-[#6B6560] max-w-sm font-sans"
                     style={{ fontFamily: "sans-serif", fontWeight: 400 }}
                   >
                     {item.desc}
                   </p>
 
                   {/* Button */}
-                  <button className="px-16 py-3 bg-soft-beige border-charcoal border rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300"
+                  <button className="px-16 py-3 bg-soft-beige border-charcoal border rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer"
                     style={{ fontFamily: "sans-serif" }}
                   >
                     Check Live Site
