@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <section className="bg-[#F5E6A3] min-h-screen flex items-center overflow-hidden">
+    <section className="bg-yellowish/80 md:bg-yellowish min-h-screen flex items-center overflow-hidden">
       <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* LEFT: Stacked overlapping images */}
         <div className="relative h-[520px] sm:h-[600px] lg:h-[700px]">

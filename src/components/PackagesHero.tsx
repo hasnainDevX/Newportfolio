@@ -1,9 +1,12 @@
 import Navbar from "../components/Navbar";
+import AnnouncementBar from "../components/AnnouncementBar";
+import packagesHero from "../assets/vasite2.jpeg"
 
 const PackagesHero = () => {
   return (
     <div className="min-h-screen flex flex-col relative border-b border-gray-300">
       <header className="absolute top-0 left-0 right-0 z-50">
+        <AnnouncementBar />
         <Navbar />
       </header>
 
@@ -11,9 +14,8 @@ const PackagesHero = () => {
       <div className="flex flex-col md:flex-row min-h-screen">
         {/* LEFT — portrait image */}
         <div className="relative w-full md:w-1/2 min-h-[55vh] md:min-h-screen overflow-hidden">
-          {/* Replace src with your actual image */}
           <img
-            src="https://www.belle-creative.co.uk/cdn/shop/files/Wren_MacBook_Mockup_2.jpg?v=1767099449"
+            src={packagesHero}
             alt="Designer portrait"
             className="absolute inset-0 w-full h-full object-cover object-top"
           />

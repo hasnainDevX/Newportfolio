@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import portfolio1 from "../../assets/allingoodhans1.png";
-import portfolio2 from "../../assets/maceysmethod3.png";
+import portfolio2 from "../../assets/maceysmethod2.png";
 import portfolio3 from "../../assets/telecomsite1.jpeg";
 import portfolio4 from "../../assets/noblesite1.jpeg";
-// import portfolio5 from "../../assets/nnsite1.jpeg";
 
 interface Portfolio {
   id: number;

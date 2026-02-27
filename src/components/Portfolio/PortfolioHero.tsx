@@ -1,6 +1,6 @@
 import AnnouncementBar from "../AnnouncementBar";
 import Navbar from "../Navbar";
-import image from "../../assets/portfolio2.webp";
+import portfolioHero from "../../assets/vasite3.jpeg"
 
 const EnquiryHero = () => {
   return (
@@ -14,7 +14,7 @@ const EnquiryHero = () => {
       {/* ── Hero image ── */}
       <div className="relative w-full overflow-hidden" style={{ height: "80vh" }}>
         <img
-          src={image}
+          src={portfolioHero}
           alt="Enquiry hero"
           className="w-full h-full object-cover object-center"
           style={{ transform: "translateZ(0)" }}

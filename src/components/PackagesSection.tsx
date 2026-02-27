@@ -1,3 +1,7 @@
+import Package11Image from "../assets/vasite3.jpeg"
+import Package1Image from "../assets/vasite2.jpeg"
+import Package2Image from "../assets/maceysmethod3.png"
+import Package3Image from "../assets/allingoodhans1.png"
 
 const PackagesSection = () => {
   return (
@@ -6,14 +10,14 @@ const PackagesSection = () => {
       <div className="package1 flex flex-col lg:flex-row w-full h-auto gap-8 lg:gap-0 py-16">
         {/* Left Decorative Part */}
         <div className="leftdecor hidden lg:flex flex-[0_0_15%] lg:py-16 py-8">
-            <img className="w-full h-full object-cover" src="https://www.belle-creative.co.uk/cdn/shop/files/bespoke-web-development-01-scaled.webp?v=1767185138" alt="" />
+            <img className="w-full h-full object-cover" src={Package11Image} alt="Package 1 Decorative Image" />
         </div>
 
         {/* Center Image Part */}
         <div className="centerimage flex-[0_0_35%] flex items-center justify-center p-8 lg:p-16">
           <div className="w-full max-w-md">
             <img
-              src="https://www.belle-creative.co.uk/cdn/shop/files/shopify-site-design-25.webp?v=1767104004"
+              src={Package1Image}
               alt="Brand Design Mockup"
               className="w-full h-auto"
             />
@@ -123,7 +127,7 @@ const PackagesSection = () => {
         <div className="centerpart flex-1 flex items-center justify-center ">
           <div className="w-full max-w-md">
             <img
-              src="https://www.belle-creative.co.uk/cdn/shop/files/Web-Design-Cheshire-18-1-scaled.webp?v=1767366872"
+              src={Package2Image}
               alt="Web Design Mockup"
               className="w-full h-auto"
             />
@@ -183,7 +187,7 @@ const PackagesSection = () => {
         <div className="leftimage flex-1 p-8 lg:p-16 flex items-center justify-center ">
           <div className="w-full max-w-md">
             <img
-              src="https://www.belle-creative.co.uk/cdn/shop/files/Web-Design-Cheshire-11-scaled.webp?v=1767185279&width=400"
+              src={Package3Image}
               alt="VIP Design Day"
               className="w-full h-auto"
             />
