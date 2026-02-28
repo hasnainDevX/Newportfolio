@@ -21,7 +21,7 @@ const loopedImages = [...marqueeImages, ...marqueeImages];
 
 const ImagesMarquee = () => {
   return (
-    <div className="overflow-hidden py-16 bg-gray-50">
+    <div className="overflow-hidden py-16">
       <div
         style={{
           display: "flex",
@@ -85,7 +85,11 @@ const ImagesMarquee = () => {
         /* On mobile, speed it up */
         @media (max-width: 768px) {
           .overflow-hidden > div {
-            animation-duration: 14s !important;
+            animation-duration: 20s !important;
+          }
+          img{
+            height: 200px !important; /* h-32 */
+            width: 200px !important;  /* w-48 */
           }
         }
       `}</style>
