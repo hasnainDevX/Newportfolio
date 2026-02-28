@@ -91,7 +91,7 @@ const PortfoliosSection = () => {
           className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wide"
           style={{ fontFamily: '"Libre Caslon Text", serif' }}
         >
-          SELECTED PROJECTS
+          RECENT PROJECTS
         </h1>
       </div>
 

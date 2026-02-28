@@ -18,7 +18,7 @@ const PackagesSection = () => {
           <div className="w-full max-w-md">
             <img
               src={Package1Image}
-              alt="Brand Design Mockup"
+              alt="The Foundation Site"
               className="w-full h-auto"
             />
           </div>
@@ -35,7 +35,7 @@ const PackagesSection = () => {
               className="text-5xl lg:text-6xl font-serif mb-6 leading-tight"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Brand Design
+              The Foundation Site
             </h2>
 
             {/* Description */}

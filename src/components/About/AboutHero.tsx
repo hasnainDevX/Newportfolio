@@ -1,13 +1,18 @@
 import Navbar from "../Navbar";
 import { useState, useEffect } from "react";
+import image2 from "../../assets/allingoodhans2.png";
+import image4 from "../../assets/randomportfolio.png";
+import image1 from "../../assets/maceysmethod4.png";
+import image3 from "../../assets/rlestatesite.png";
 
 const AboutHero = () => {
   const [currentIdx, setcurrentIdx] = useState(0);
 
   const images = [
-    "https://belle-creative.co.uk/wp-content/uploads/2025/07/creative-wordpress-website-01-1-scaled.webp",
-    "https://images.squarespace-cdn.com/content/v1/5f6a5ac31c4b325b1b4ee2fd/5cede1b2-6284-43c2-a58d-6db7c4d98f55/finding-design-brand-photography-1+laptop+mockup.jpg?format=1500w",
-    "https://belle-creative.co.uk/wp-content/uploads/2025/06/website-designers-for-small-businesses-homenew-07-scaled.png",
+    image1,
+    image2,
+    image3,
+    image4,
   ];
 
   useEffect(() => {

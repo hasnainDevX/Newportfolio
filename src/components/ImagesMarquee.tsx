@@ -4,7 +4,7 @@ import image2 from "../assets/telecomsite2.png";
 import image3 from "../assets/fruitysite1.jpeg";
 import image7 from "../assets/nnsite1.jpeg";
 import image4 from "../assets/getmeachai1.png";
-import image6 from "../assets/passcb1.png";
+import image6 from "../assets/vasite4.jpeg";
 
 const marqueeImages = [
   { src: image1, alt: "Project 1" },

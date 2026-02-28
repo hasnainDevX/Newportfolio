@@ -1,6 +1,7 @@
 import image2 from "../../assets/allingoodhans2.png";
 import image1 from "../../assets/maceysmethod2.png";
 import image3 from "../../assets/fruitysite2.jpeg";
+import { Link } from "react-router-dom";
 const AboutMe = () => {
   return (
     <section className="bg-yellowish/80 md:bg-yellowish min-h-screen flex items-center overflow-hidden">
@@ -61,9 +62,13 @@ const AboutMe = () => {
             </p>
           </div>
 
-          <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 my-4 max-w-xs">
-            See My Work
-          </button>
+          <Link
+            to="/portfolio"
+          >
+            <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 my-4 max-w-xs">
+              See My Work
+            </button>
+          </Link>
         </div>
       </div>
     </section>
