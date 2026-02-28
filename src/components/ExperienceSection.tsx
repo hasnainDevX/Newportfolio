@@ -1,20 +1,14 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const industries = [
-  "Fashion Designers",
-  "Beauty Brands",
-  "Wedding Stationery",
-  "Life Coaches",
-  "Yoga Studios",
-  "Candle Makers",
-  "Therapists",
+  "Virtual Assistants",
+  "E-commerce Stores",
+  "Coaches & Consultants",
+  'Cleaning Services',
   "Social Media Managers",
-  "Pet Care",
-  "Loneliness Communities",
-  "Interior Designers",
+  "Restaurants & Cafes",
+  "Internet Service Providers",
   "Photographers",
 ];
 
@@ -152,8 +146,7 @@ const ExperienceSection = () => {
                   >
                     {/* Small diamond accent */}
                     <span
-                      className="w-1.5 h-1.5 rounded-full shrink-0 transition-colors duration-300 group-hover:bg-white"
-                      style={{ backgroundColor: "#b5973a" }}
+                      className="w-1.5 h-1.5 rounded-full shrink-0 transition-colors duration-300 group-hover:bg-white hover:text-white hover:bg-white bg-gold"
                     />
                     {industry}
                   </span>

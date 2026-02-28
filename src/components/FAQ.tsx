@@ -7,28 +7,32 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
-    question: "How much does a web design project cost?",
-    answer: "Every project is unique, but our website packages typically start from £1,200. The final investment depends on the scope, number of pages, and any additional features. You can review our full 2026 Services & Pricing Guide for a detailed breakdown.",
+    question: "How much does a website cost?",
+    answer: "Packages start from £200 and go up depending on the scope — number of pages, features, animations, and so on. The packages page has a full breakdown, but if you're still unsure, just fill out the enquiry form and I'll give you a straight answer based on what you actually need.",
+  },
+  {
+    question: "Why custom code instead of Wix, WordPress, or Squarespace?",
+    answer: "Builders are convenient, but they come with a cost — bloated code, slow load times, generic layouts, and monthly fees that add up. A custom-coded site is leaner, faster, and built exactly around your business. No unused plugins, No monthly Fee ever, no one-size-fits-all templates. You own it completely.",
+  },
+  {
+    question: "Can I update the website myself after it's built?",
+    answer: "Yes — on the Signature and Complete Vision packages, your site comes with a custom content management system. You can update text, swap images, add blog posts, and manage pages without touching a single line of code. It's built to be genuinely easy to use, not just technically possible.",
   },
   {
     question: "How long does the process take?",
-    answer: "Most website projects are completed within 4–6 weeks from the project kick-off date. This timeline depends on how quickly content and feedback are provided. We'll agree on a clear timeline before we begin so there are no surprises.",
+    answer: "The Foundation Site typically wraps up in 1–2 weeks. Larger projects run 3–8 weeks depending on scope. The biggest factor is usually how quickly content and feedback come through on your end — I'll always give you a clear timeline upfront so nothing drags.",
   },
   {
     question: "Do you offer payment plans?",
-    answer: "Yes! We offer split payment options to make things more manageable. Typically this is a 50% deposit to secure your spot, with the remaining balance due before your site goes live. We can discuss what works best for you.",
-  },
-  {
-    question: "What website platforms do you work with?",
-    answer: "We primarily design and build on Shopify and custom-coded platforms. If you're unsure what's right for your business, we'll help you figure that out during the enquiry process — no tech knowledge required on your end.",
+    answer: "Yes. A deposit is required to lock in your start date, with the remainder due before launch. The Signature and Complete Vision packages also have 2 and 3-month split payment options respectively — details are on the packages page.",
   },
   {
     question: "Will my website work on mobile?",
-    answer: "Absolutely. Every website we build is fully responsive and tested across devices and screen sizes. Mobile experience is a core part of our design process, not an afterthought.",
+    answer: "Every site is fully responsive and tested across phones, tablets, and desktops before it goes live. Mobile isn't an add-on — it's built in from the start, since that's where most of your visitors will land anyway.",
   },
   {
-    question: "I'm not sure what I need — can we chat first?",
-    answer: "Of course! Fill out the enquiry form and give us a rough idea of where you're at. We'll be in touch to set up a discovery call where we can talk through your goals and figure out the best path forward together.",
+    question: "I'm not sure which package is right for me.",
+    answer: "That's completely fine — most people aren't sure before we talk. Fill out the enquiry form with a rough idea of what you're after and I'll come back to you with a recommendation. No pressure, no sales pitch.",
   },
 ];
 
@@ -51,9 +55,8 @@ const FAQItem = ({ faq }: { faq: FAQ; index: number }) => {
           {faq.question}
         </span>
 
-        {/* Chevron icon — rotates on open */}
         <span
-          className="shrink-0 flex items-center justify-center transition-transform duration-400 px-10 md:px-16 "
+          className="shrink-0 flex items-center justify-center transition-transform duration-400 px-10 md:px-16"
           style={{
             transform: open ? "rotate(180deg)" : "rotate(0deg)",
             color: "#1a1a1a",
@@ -71,7 +74,6 @@ const FAQItem = ({ faq }: { faq: FAQ; index: number }) => {
         </span>
       </button>
 
-      {/* Answer — smooth height animation */}
       <div
         className="overflow-hidden transition-all duration-500 ease-in-out"
         style={{ maxHeight: open ? "300px" : "0px" }}
@@ -89,17 +91,15 @@ const FAQItem = ({ faq }: { faq: FAQ; index: number }) => {
 
 const FAQSection = () => {
   return (
-    <section className="w-full  py-20 md:py-28">
-      <div className="m mx-auto">
+    <section className="w-full py-20 md:py-28">
+      <div className="mx-auto">
 
-        {/* Header */}
         <p
           className="text-xs tracking-[0.4em] uppercase text-[#999] mb-12 font-sans px-10 md:px-16 lg:px-24"
         >
           Frequently Asked Questions
         </p>
 
-        {/* FAQ list */}
         <div style={{ borderTop: "1px solid #e0d9d0" }}>
           {faqs.map((faq, idx) => (
             <FAQItem key={idx} faq={faq} index={idx} />

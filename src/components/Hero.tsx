@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Hero = () => {
@@ -35,9 +36,11 @@ const Hero = () => {
         </h1>
         {/* CTA Button */}
         {/* Button */}
-        <button className="px-16 py-3 bg-soft-beige text-charcoal border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+        <Link to="/enquiry" >
+        <button className="px-16 py-3 bg-soft-beige text-charcoal border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 hover:border-yellowish cursor-pointer">
           Let's Talk
         </button>
+        </Link>
       </div>
     </div>
   );

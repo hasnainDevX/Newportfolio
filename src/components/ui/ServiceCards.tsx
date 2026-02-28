@@ -67,10 +67,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                 </div>
 
                 {/* Content Section */}
-                <div
-                  className="w-full md:w-3/5 h-[65%] sm:h-[60%] md:h-full p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 flex flex-col justify-center font-sans"
-                
-                >
+                <div className="w-full md:w-3/5 h-[65%] sm:h-[60%] md:h-full p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 flex flex-col justify-center font-sans">
                   <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 max-w-2xl">
                     {/* Title */}
                     <h2
@@ -86,12 +83,8 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                     </p>
 
                     {/* WIF Section */}
-                    <div
-                      className="rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-soft-beige md:bg-yellowish/50 bg-yellowish/30"
-                    >
-                      <h3
-                        className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] sm:tracking-[0.15em] mb-2 sm:mb-3 text-charcoal"
-                      >
+                    <div className="rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-soft-beige md:bg-yellowish/50 bg-yellowish/30">
+                      <h3 className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] sm:tracking-[0.15em] mb-2 sm:mb-3 text-charcoal">
                         Who Is This For?
                       </h3>
                       <p className="text-charcoal text-[13px] sm:text-sm md:text-base leading-relaxed">
@@ -102,13 +95,16 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-3 md:pt-4">
                       {/* Button */}
-                      <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
-                        Get Started
-                      </button>
-                      <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
-                        Learn More
-                      </button>
-                      
+                      <Link to="/enquiry" >
+                        <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
+                          Get Started
+                        </button>
+                      </Link>
+                      <Link to="/packages" >
+                        <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
+                          Learn More
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -124,6 +120,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
 import service1 from "../../assets/maceysmethod4.png";
 import service2 from "../../assets/allingoodhans1.png";
 import service3 from "../../assets/telecomsite1.jpeg";
+import { Link } from "react-router-dom";
 const Skiper17 = () => {
   const defaultCards = [
     {

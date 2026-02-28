@@ -7,27 +7,27 @@ gsap.registerPlugin(ScrollTrigger);
 const testimonials = [
   {
     quote:
-      "We've attracted two multi-million-dollar clients thus far, and one of them has successfully converted. The comprehensive overhaul of our website has been incredibly effective.",
-    name: "Michael",
-    company: "Mica Living",
+      "I had a great experience working with hasnainwebworks on my website (maceysmethod.co.uk) for my virtual assistant business. They were professional, creative, and really listened to my ideas. The final site is easy to navigate and perfectly represents my brand. I highly recommend them to anyone looking for a talented and reliable website designer!.",
+    name: "Macey",
+    company: "Macey's Method - Virtual Assistant",
   },
   {
     quote:
-      "I would reinvest 10x over, I'm in love with my new WordPress website and branding!",
-    name: "Ayla",
-    company: "Esme Copywriting Studio",
+      "Hasnain has created a website for me that truly represents who I am. I can tell he put a lot of work into it and took on board any feedback I had throughout the process.",
+    name: "Hannah",
+    company: "All In Good Hans - Virtual Assistant",
   },
   {
     quote:
-      "The final result exceeded all our expectations, and we couldn't be happier. Working with Belle Creative has been an outstanding investment.",
-    name: "Amy",
-    company: "Amy Jennifer Jewellery",
+      "Hasnain did an incredible job on our website. We needed something clean, professional, and easy to navigate — and he delivered exactly that. His communication was clear throughout the process, and the final result represents our brand perfectly. Highly recommend him if you want a website that actually works for your business.",
+    name: "Jason Malik",
+    company: "Manager at Go Quality Networks",
   },
   {
     quote:
-      "I feel like Izzy just gets me. She takes the time to truly understand my vision, my brand, and where I want to go – even when I can't fully articulate it myself.",
-    name: "Calla",
-    company: "Facemuse London",
+      "I had a vision for a sleek, modern website that could clearly explain our services and help us book clients — and Hasnain nailed it. He was responsive, detail-oriented, and honestly cared about getting it right. Our site looks great and functions perfectly. I’m so glad we chose his services.",
+    name: "Jenn",
+    company: "Founder of Noble Cleaning Solution",
   },
 ];
 
@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
                   </svg>
                 </div>
 
-                <p className="text-lg md:text-xl leading-relaxed mb-6 font-light">
+                <p className="md:etext-lg leading-relaxed mb-6 font-light">
                   {testimonial.quote}
                 </p>
 
