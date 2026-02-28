@@ -25,16 +25,18 @@ const ImagesMarquee = () => {
       <div
         style={{
           display: "flex",
-          flexWrap: "nowrap",         // keep all images in one row
-          width: "max-content",       // ← key fix: don't collapse the row
+          flexWrap: "nowrap", // keep all images in one row
+          width: "max-content", // ← key fix: don't collapse the row
           animation: "marquee 48s linear infinite",
           willChange: "transform",
         }}
         onMouseEnter={(e) =>
-          ((e.currentTarget as HTMLDivElement).style.animationPlayState = "paused")
+          ((e.currentTarget as HTMLDivElement).style.animationPlayState =
+            "paused")
         }
         onMouseLeave={(e) =>
-          ((e.currentTarget as HTMLDivElement).style.animationPlayState = "running")
+          ((e.currentTarget as HTMLDivElement).style.animationPlayState =
+            "running")
         }
       >
         {loopedImages.map((image, idx) => (
@@ -58,11 +60,12 @@ const ImagesMarquee = () => {
             }}
           >
             <img
+              className="marquee-image"
               src={image.src}
               alt={image.alt}
               style={{
-                height: "300px",        // h-48
-                width: "300px",         // w-72
+                height: "300px", // h-48
+                width: "300px", // w-72
                 borderRadius: "12px",
                 objectFit: "cover",
                 transform: "translateZ(0)",
@@ -87,7 +90,7 @@ const ImagesMarquee = () => {
           .overflow-hidden > div {
             animation-duration: 20s !important;
           }
-          img{
+          .marquee-image{
             height: 200px !important; /* h-32 */
             width: 200px !important;  /* w-48 */
           }
