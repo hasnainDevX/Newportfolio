@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 const TextMarquee = ({
   data,
   speed = 20,
@@ -15,45 +17,53 @@ const TextMarquee = ({
   textSize?: string;
   height?: string;
 }) => {
-  const marqueeId = `marquee-${Math.random().toString(36).slice(2, 7)}`;
+  // ✅ Generated once, never changes across re-renders
+  const marqueeId = useRef(`marquee-${Math.random().toString(36).slice(2, 7)}`).current;
+
+  // ✅ Duplicate here, not in JSX — cleaner and same pattern as the others
+  const loopedData = [...data, ...data];
 
   return (
     <div>
       <div
-        className="overflow-hidden whitespace-nowrap"
-        style={{ backgroundColor: bgColor, fontFamily: "Libre Caslon Text, serif", height }}
+        className="overflow-hidden"
+        style={{
+          backgroundColor: bgColor,
+          fontFamily: "Libre Caslon Text, serif",
+          height,
+        }}
       >
         <div
           id={marqueeId}
-          className="inline-block font-black uppercase"
           style={{
+            display: "inline-flex",
+            flexWrap: "nowrap",
+            width: "max-content", 
+            alignItems: "center",
             fontSize: textSize,
             color: textColor,
+            fontWeight: 900,
+            textTransform: "uppercase",
             paddingTop: height === "auto" ? "1.5rem" : undefined,
             paddingBottom: height === "auto" ? "1.5rem" : undefined,
-            display: "inline-flex",
-            alignItems: "center",
             height: height !== "auto" ? height : undefined,
           }}
         >
-          {data.map((text, idx) => (
+          {loopedData.map((text, idx) => (
             <span
               key={idx}
-              className="mx-8 transition-colors duration-300"
-              style={{ color: textColor }}
-              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = hoverColor)}
-              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = textColor)}
-            >
-              {text}
-            </span>
-          ))}
-          {data.map((text, idx) => (
-            <span
-              key={`repeat-${idx}`}
-              className="mx-8 transition-colors duration-300"
-              style={{ color: textColor }}
-              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = hoverColor)}
-              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = textColor)}
+              className="transition-colors duration-300"
+              style={{
+                color: textColor,
+                margin: "0 2rem",
+                flexShrink: 0,
+              }}
+              onMouseEnter={(e) =>
+                ((e.target as HTMLElement).style.color = hoverColor)
+              }
+              onMouseLeave={(e) =>
+                ((e.target as HTMLElement).style.color = textColor)
+              }
             >
               {text}
             </span>
@@ -62,12 +72,12 @@ const TextMarquee = ({
       </div>
 
       <style>{`
-        @keyframes textmarquee-${marqueeId} {
+        @keyframes ${marqueeId} {
           0%   { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
         }
         #${marqueeId} {
-          animation: textmarquee-${marqueeId} ${speed}s linear infinite;
+          animation: ${marqueeId} ${speed}s linear infinite;
         }
       `}</style>
     </div>

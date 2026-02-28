@@ -1,4 +1,16 @@
-const announcementText = "Now Booking";
+const announcementItems = [
+  "Now Booking",
+  "✦",              
+  "Now Booking",
+  "✦",
+  "Now Booking",
+  "✦",
+  "Now Booking",
+  "✦",
+];
+
+const loopedItems = [...announcementItems, ...announcementItems];
+
 const AnnouncementBar = () => {
   return (
     <div>
@@ -6,24 +18,25 @@ const AnnouncementBar = () => {
       <div className="w-full bg-charcoal overflow-hidden py-1">
         <div
           className="flex whitespace-nowrap"
-          style={{ animation: "announcebar 22s linear infinite" }}
+          style={{
+            display: "flex",
+            flexWrap: "nowrap",
+            width: "max-content",   // ← same fix as images: don't collapse
+            animation: "announcebar 22s linear infinite",
+          }}
         >
-          {Array.from({ length: 8 }).map((_, i) => (
+          {loopedItems.map((announcementText, i) => (
             <span
               key={i}
-              className="text-white text-xs tracking-[0.25em] uppercase font-sans mx-12 shrink-0"
+              className="text-white text-xs tracking-[0.25em] uppercase font-sans mx-6 shrink-0"
             >
               {announcementText}
             </span>
           ))}
         </div>
       </div>
-       <style>{`
+      <style>{`
         @keyframes announcebar {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        @keyframes heromarquee {
           0%   { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }

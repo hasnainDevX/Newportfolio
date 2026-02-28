@@ -5,13 +5,13 @@ const faqs = [
     question: "WHAT YOU CAN EXPECT FROM ME...",
     answer:
       "Clear communication, honest timelines, and a website built properly — not patched together. You'll get a developer who actually understands your business goals, keeps you in the loop throughout, and delivers something you're proud to share. No templates, no shortcuts, no ghosting after handoff.",
-    bg: "bg-soft-beige text-[#1a1a1a]",
+    bg: "bg-charcoal/90 text-[#ffffff]",
   },
   {
     question: "WHAT YOU WON'T GET FROM ME...",
     answer:
       "Cookie-cutter designs, bloated page builders, or a site that falls apart the moment you try to update it. I don't do rushed work, vague timelines, or projects I'm not confident I can do justice. If it's not the right fit, I'll tell you upfront.",
-    bg: "bg-soft-beige text-[#1a1a1a]",
+    bg: "bg-charcoal/90 text-[#ffffff]",
   },
 ];
 
@@ -28,10 +28,10 @@ const FAQ = () => {
             onClick={() => setOpen(open === i ? null : i)}
           >
             <div className="flex items-center justify-between px-8 py-7">
-              <h3 className="font-playfair text-xl sm:text-2xl lg:text-3xl tracking-tight text-[#1a1a1a] uppercase">
+              <h3 className="font-playfair text-xl sm:text-2xl lg:text-3xl tracking-tight  uppercase">
                 {faq.question}
               </h3>
-              <button className="flex-shrink-0 ml-6 w-10 h-10 rounded-full border-2 border-[#1a1a1a] flex items-center justify-center text-[#1a1a1a] transition-transform duration-300 cursor-pointer"
+              <button className="flex-shrink-0 ml-6 w-10 h-10 rounded-full border-2 border-white flex items-center justify-center transition-transform duration-300 cursor-pointer"
                 style={{ transform: open === i ? "rotate(45deg)" : "rotate(0deg)" }}
               >
                 <span className="text-xl leading-none mb-1">+</span>
@@ -42,7 +42,7 @@ const FAQ = () => {
               className="overflow-hidden transition-all duration-300 ease-in-out"
               style={{ maxHeight: open === i ? "300px" : "0px" }}
             >
-              <p className="px-8 pb-7 text-base sm:text-lg text-[#1a1a1a] leading-relaxed font-sans">
+              <p className="px-8 pb-7 text-base sm:text-lg leading-relaxed font-sans">
                 {faq.answer}
               </p>
             </div>

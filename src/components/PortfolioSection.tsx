@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import portfolio1 from "../assets/maceysmethod3.png";
+import portfolio2 from "../assets/fruitysite1.jpeg";
+import portfolio3 from "../assets/allingoodhans1.png";
+import portfolio4 from "../assets/rlestatesite.png";
 
 const PortfolioSection = () => {
   const [currentIdx, setcurrentIdx] = useState(0);
 
   const images = [
-    "https://belle-creative.co.uk/wp-content/uploads/2025/07/creative-wordpress-website-01-1-scaled.webp",
-    "https://images.squarespace-cdn.com/content/v1/5f6a5ac31c4b325b1b4ee2fd/5cede1b2-6284-43c2-a58d-6db7c4d98f55/finding-design-brand-photography-1+laptop+mockup.jpg?format=1500w",
-    "https://belle-creative.co.uk/wp-content/uploads/2025/06/website-designers-for-small-businesses-homenew-07-scaled.png",
+    portfolio1,
+    portfolio2,
+    portfolio3,
+    portfolio4,
   ];
 
   useEffect(() => {

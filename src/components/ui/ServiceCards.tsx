@@ -121,13 +121,14 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
   );
 };
 
-// Example usage component
+import service1 from "../../assets/maceysmethod4.png";
+import service2 from "../../assets/allingoodhans1.png";
+import service3 from "../../assets/telecomsite1.jpeg";
 const Skiper17 = () => {
   const defaultCards = [
     {
       id: 1,
-      image:
-        "https://belle-creative.co.uk/wp-content/uploads/2025/09/homepage-services-grid-2.png",
+      image: service1,
       title: "The Foundation Website",
       timeline: "1-2 weeks",
       wif: "Perfect for small businesses and individuals who want a simple yet professional online presence.",
@@ -136,7 +137,7 @@ const Skiper17 = () => {
     },
     {
       id: 2,
-      image: "https://hasnainwebworks.vercel.app/service3.png",
+      image: service2,
       title: "The Signature Site",
       timeline: "3-5 weeks",
       wif: "For growing businesses ready to stand out from competitors with a website that commands attention and builds trust.",
@@ -145,8 +146,7 @@ const Skiper17 = () => {
     },
     {
       id: 3,
-      image:
-        "https://belle-creative.co.uk/wp-content/uploads/2025/09/homepage-services-grid-3.png",
+      image: service3,
       title: "The Complete Vision",
       timeline: "5-10 weeks",
       wif: "For established businesses, brands, and e-commerce stores ready to automate workflows, scale operations, and deliver premium customer experiences.",

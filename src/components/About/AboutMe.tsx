@@ -1,3 +1,6 @@
+import image2 from "../../assets/allingoodhans2.png";
+import image1 from "../../assets/maceysmethod2.png";
+import image3 from "../../assets/fruitysite2.jpeg";
 const AboutMe = () => {
   return (
     <section className="bg-yellowish/80 md:bg-yellowish min-h-screen flex items-center overflow-hidden">
@@ -6,7 +9,7 @@ const AboutMe = () => {
         <div className="relative h-[520px] sm:h-[600px] lg:h-[700px]">
           <div className="absolute top-0 left-4 sm:left-10 w-[260px] sm:w-[320px] lg:w-[380px] shadow-2xl z-20 -rotate-6">
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5f6a5ac31c4b325b1b4ee2fd/bf63e608-d43c-4243-bee5-e17e0f5d06c8/Alice+benham+workshop+coming+soon+page.jpg?format=500w"
+              src={image1}
               alt="Project"
               className="w-full h-auto object-cover block"
             />
@@ -14,7 +17,7 @@ const AboutMe = () => {
 
           <div className="absolute top-[140px] sm:top-[160px] left-[100px] sm:left-[140px] lg:left-[160px] w-[260px] sm:w-[310px] lg:w-[360px] shadow-2xl z-30 rotate-3">
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5f6a5ac31c4b325b1b4ee2fd/6fe0811a-5ba0-4264-ae52-1a0c32d02b59/Pretty+Little+Marketer+Squarespace+homepage.jpg?format=500w"
+              src={image2}
               alt="Project"
               className="w-full h-auto object-cover block"
             />
@@ -22,9 +25,9 @@ const AboutMe = () => {
 
           <div className="absolute top-[300px] sm:top-[340px] left-0 w-[240px] sm:w-[290px] lg:w-[340px] shadow-2xl z-10 -rotate-[4deg]">
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5f6a5ac31c4b325b1b4ee2fd/bf63e608-d43c-4243-bee5-e17e0f5d06c8/Alice+benham+workshop+coming+soon+page.jpg?format=500w"
+              src={image3}
               alt="Project"
-              className="w-full h-auto object-cover block"
+              className="w-full max-h-[80%] object-cover block"
             />
           </div>
         </div>
