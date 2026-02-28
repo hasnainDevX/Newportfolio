@@ -16,7 +16,7 @@ const Home = () => {
         <AnnouncementBar />
       </div>
       <Hero />
-      <div className="ribbon">
+      <div className="md:block hidden ribbon">
         <img className="h-[10vh] w-full" src={ribbon} alt="ribbon" />
       </div>
       <ImagesMarquee />
