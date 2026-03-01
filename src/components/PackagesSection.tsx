@@ -1,7 +1,7 @@
 import Package11Image from "../assets/vasite3.jpeg";
-import Package1Image from "../assets/vasite2.jpeg";
-import Package2Image from "../assets/maceysmethod3.png";
-import Package3Image from "../assets/allingoodhans1.png";
+import Package2Image from "../assets/vasite4.jpeg";
+import Package1Image from "../assets/maceysmethod3.png";
+import Package3Image from "../assets/ecomsite1.jpeg";
 
 // ✓ checkmark + bold key phrase + optional lighter trailing text
 const Deliverable = ({
@@ -99,7 +99,7 @@ const PackagesSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 mb-6">
               <div>
                 <Deliverable
-                  bold="Custom-coded website"
+                  bold="Custom-coded Website"
                   normal="built from scratch"
                 />
                 <Deliverable
@@ -226,7 +226,7 @@ const PackagesSection = () => {
       <hr className="border-t border-gray-500" />
 
       {/* ── 03 The Complete Vision ── */}
-      <div className="package3 flex flex-col lg:flex-row w-full h-auto gap-8 lg:gap-0 py-16">
+      <div className="package3 flex flex-col lg:flex-row w-full h-auto gap-0 py-16">
         <div className="leftimage flex-1 p-8 lg:p-16 flex items-center justify-center">
           <div className="w-full max-w-md">
             <img
@@ -262,7 +262,7 @@ const PackagesSection = () => {
               Built to scale with you
             </h3>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 ">
               {[
                 "Capture and nurture leads automatically",
                 "Scale your business without working more hours",

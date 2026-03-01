@@ -8,11 +8,11 @@ interface Approach {
 }
 
 const approaches: Approach[] = [
-  { number: "01.", description: "A clear, intentional customer journey mapped out from start to submit" },
-  { number: "02.", description: "A design that feels like your next era, not your last one" },
-  { number: "03.", description: "Collaboration with you to create a site that positions you as the expert and go-to in your industry, because that's who you are" },
-  { number: "04.", description: "Messaging that communicates your value to the people you're aligned most closely with" },
-  { number: "05.", description: "A custom web design that scales with your success, not against it (no, you shouldn't need to revamp your entire site every 2 years!)" },
+  { number: "01.", description: "Starting with the right questions — example sites, brand assets, and a clear vision before a single line of code is written" },
+  { number: "02.", description: "A site that feels like the next version of your brand, not a template someone else already has" },
+  { number: "03.", description: "Section-by-section feedback throughout the build, so nothing gets to the end and surprises you" },
+  { number: "04.", description: "Unlimited revisions during development — we get it right, not just done" },
+  { number: "05.", description: "Custom-coded from scratch, so it loads fast, scales cleanly, and doesn't need replacing in two years" },
 ];
 
 // Mobile accordion cell
@@ -93,9 +93,8 @@ const MyApproach = () => {
       <div className="sm:hidden" style={{ borderTop: "1px solid #d6c9b8", borderLeft: "1px solid #d6c9b8" }}>
         {/* Label cell */}
         <div
-          className="flex flex-col items-center justify-center gap-5 px-8 py-10 text-center transition-all duration-700"
+          className="flex flex-col items-center justify-center gap-5 px-8 py-10 text-center transition-all duration-700 bg-yellowish/80"
           style={{
-            backgroundColor: "#f5e8e0",
             borderRight: "1px solid #d6c9b8",
             borderBottom: "1px solid #d6c9b8",
             opacity: visible ? 1 : 0,
@@ -123,7 +122,7 @@ const MyApproach = () => {
       >
         {/* Label cell */}
         <div
-          className="flex flex-col items-center justify-center gap-5 p-10 text-center transition-all duration-700 bg-yellowish!"
+          className="flex flex-col items-center justify-center gap-5 p-10 text-center transition-all duration-700 bg-yellowish "
           style={{
             borderRight: "1px solid #d6c9b8",
             borderBottom: "1px solid #d6c9b8",

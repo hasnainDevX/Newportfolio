@@ -5,7 +5,7 @@ const TextMarquee = ({
   speed = 20,
   bgColor = "#2A2A2A",
   textColor = "#ffffff",
-  hoverColor = "#7EB8D4",
+  hoverColor = "#b5973a",
   textSize = "1.875rem",
   height = "auto",
 }: {
@@ -17,10 +17,7 @@ const TextMarquee = ({
   textSize?: string;
   height?: string;
 }) => {
-  // ✅ Generated once, never changes across re-renders
   const marqueeId = useRef(`marquee-${Math.random().toString(36).slice(2, 7)}`).current;
-
-  // ✅ Duplicate here, not in JSX — cleaner and same pattern as the others
   const loopedData = [...data, ...data];
 
   return (

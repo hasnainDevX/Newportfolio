@@ -1,17 +1,35 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const handleSubscribe = () => {
-    if (email && firstName) {
-      console.log('Subscribed:', { firstName, email });
-      alert('Thank you for subscribing!');
-      setEmail('');
-      setFirstName('');
-    }
+    if (!email || !firstName) return;
+
+    setStatus('loading');
+
+    emailjs
+      .send(
+        'your_service_id',           // ← replace with your EmailJS service ID
+        'your_newsletter_template_id', // ← replace with your newsletter template ID
+        {
+          from_name: firstName,
+          from_email: email,
+        },
+        'your_public_key'            // ← replace with your EmailJS public key
+      )
+      .then(() => {
+        setStatus('success');
+        setEmail('');
+        setFirstName('');
+      })
+      .catch(() => {
+        setStatus('error');
+      });
   };
 
   return (
@@ -24,10 +42,10 @@ const Footer = () => {
             <h3 className="text-base font-semibold mb-6 uppercase tracking-widest" style={{ fontFamily: 'system-ui, sans-serif' }}>Quick Links</h3>
             <ul className="space-y-3">
               <li><Link to="/" className="text-[#2a2a2a] hover:text-gold transition-colors duration-200 text-sm">Home</Link></li>
-              <li><Link to="/our-story" className="text-[#2a2a2a] hover:text-gold transition-colors duration-200 text-sm">About</Link></li>
-              <li><Link to="/bespoke-web-development" className="text-[#2a2a2a] hover:text-gold transition-colors duration-200 text-sm">Packages</Link></li>
+              <li><Link to="/about" className="text-[#2a2a2a] hover:text-gold transition-colors duration-200 text-sm">About</Link></li>
+              <li><Link to="/packages" className="text-[#2a2a2a] hover:text-gold transition-colors duration-200 text-sm">Packages</Link></li>
               <li><Link to="/portfolio" className="text-[#2a2a2a] hover:text-gold transition-colors duration-200 text-sm">Portfolios</Link></li>
-              <li><Link to="/blog" className="text-[#2a2a2a] hover:text-gold transition-colors duration-200 text-sm">Enquiry</Link></li>
+              <li><Link to="/enquiry" className="text-[#2a2a2a] hover:text-gold transition-colors duration-200 text-sm">Enquiry</Link></li>
             </ul>
           </div>
 
@@ -61,28 +79,36 @@ const Footer = () => {
               Thoughts, inspiration and digital joy delivered to your inbox.
             </p>
 
-            <div className="space-y-2">
-              <input
-                type="text"
-                placeholder="First name"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                className="w-full px-4 py-2.5 bg-white text-[#2a2a2a] placeholder-[#2a2a2a]/40 focus:outline-none focus:ring-1 focus:ring-gold text-xs"
-              />
-              <input
-                type="email"
-                placeholder="Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2.5 bg-white text-[#2a2a2a] placeholder-[#2a2a2a]/40 focus:outline-none focus:ring-1 focus:ring-gold text-xs"
-              />
-              <button
-                onClick={handleSubscribe}
-                className="w-full px-4 py-2.5 bg-[#2a2a2a] text-[#f5f2eb] font-medium transition-all duration-300 text-xs uppercase tracking-wider"
-              >
-                Subscribe
-              </button>
-            </div>
+            {status === 'success' ? (
+              <p className="text-xs text-green-700">You're in — talk soon.</p>
+            ) : (
+              <div className="space-y-2">
+                <input
+                  type="text"
+                  placeholder="First name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  className="w-full px-4 py-2.5 bg-white text-[#2a2a2a] placeholder-[#2a2a2a]/40 focus:outline-none focus:ring-1 focus:ring-gold text-xs"
+                />
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-2.5 bg-white text-[#2a2a2a] placeholder-[#2a2a2a]/40 focus:outline-none focus:ring-1 focus:ring-gold text-xs"
+                />
+                <button
+                  onClick={handleSubscribe}
+                  disabled={status === 'loading'}
+                  className="w-full px-4 py-2.5 bg-[#2a2a2a] text-[#f5f2eb] font-medium transition-all duration-300 text-xs uppercase tracking-wider disabled:opacity-50"
+                >
+                  {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+                </button>
+                {status === 'error' && (
+                  <p className="text-xs text-red-500">Something went wrong. Please try again.</p>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

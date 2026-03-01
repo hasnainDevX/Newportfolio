@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Cta = () => {
   return (
@@ -23,7 +24,7 @@ const Cta = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
           {/* Book Discovery Call */}
           <a 
-            href="/contact"
+            href="/enquiry"
             className="group relative inline-block"
           >
             <span 
@@ -36,8 +37,8 @@ const Cta = () => {
           </a>
           
           {/* Apply to Work Together */}
-          <a 
-            href="/contact"
+          <Link
+            to="/enquiry"
             className="group relative inline-block"
           >
             <span 
@@ -47,7 +48,7 @@ const Cta = () => {
               APPLY TO WORK TOGETHER
             </span>
             <span className="absolute bottom-0 left-0 w-full h-[1px] bg-white transform origin-left transition-transform duration-300 group-hover:scale-x-110"></span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

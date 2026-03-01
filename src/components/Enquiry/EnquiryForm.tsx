@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
@@ -14,15 +12,14 @@ interface FormData {
   budget: string;
   timeline: string;
   referralSource: string;
-  referralName: string;
   additionalInfo: string;
 }
 
 const budgetOptions = [
-  "£1,200 – £2,500 GBP",
-  "£2,500 – £4,000 GBP",
-  "£4,500 – £6,000 GBP",
-  "£6,000+ GBP",
+  "£200 – £500 GBP",
+  "£500 – £1000 GBP",
+  "£1000 – £2000 GBP",
+  "£2,000+ GBP",
 ];
 
 const timelineOptions = [
@@ -78,7 +75,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "", lastName: "", email: "", businessName: "",
     website: "", socialMedia: "", location: "", reviewedPricingGuide: "",
-    budget: "", timeline: "", referralSource: "", referralName: "", additionalInfo: "",
+    budget: "", timeline: "", referralSource: "", additionalInfo: "",
   });
 
   const handleChange = (
@@ -156,7 +153,7 @@ const ContactForm = () => {
         {/* Social Media */}
         <div>
           <label htmlFor="socialMedia" className={labelCls}>
-            Business social media handle (if you have social media)
+            Business social media handle
           </label>
           <input type="text" id="socialMedia" name="socialMedia" value={formData.socialMedia} onChange={handleChange} placeholder="@handle" className={inputCls} />
         </div>
@@ -232,12 +229,12 @@ const ContactForm = () => {
         </div>
 
         {/* Referral Name */}
-        <div>
+        {/* <div>
           <label htmlFor="referralName" className={labelCls}>
             If you found us via word of mouth, who can we thank?
           </label>
           <input type="text" id="referralName" name="referralName" value={formData.referralName} onChange={handleChange} className={inputCls} />
-        </div>
+        </div> */}
 
         {/* Additional Info */}
         <div>

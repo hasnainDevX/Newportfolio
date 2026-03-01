@@ -48,13 +48,13 @@ const AboutMe = () => {
               and I never looked back.
             </p>
 
-            <p className="font-sans text-xs sm:text-base text-[#1a1a1a] leading-relaxed">
+            <p className="font-sans text-base sm:text-lg text-[#1a1a1a] leading-relaxed">
               I'm not your average freelancer. Studying software engineering
               means I understand how the web actually works — I build what no
               drag-and-drop builder can. Clean, custom, engineered to perform.
             </p>
 
-            <p className="font-sans text-xs sm:text-base text-[#1a1a1a] leading-relaxed">
+            <p className="font-sans text-base sm:text-lg text-[#1a1a1a] leading-relaxed">
               Over two years of freelancing, I've delivered projects for clients
               across the globe — working mostly with virtual assistants and
               coaches in the UK, building sites that don't just look good. They
