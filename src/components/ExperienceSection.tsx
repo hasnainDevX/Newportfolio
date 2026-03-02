@@ -6,10 +6,15 @@ const industries = [
   "E-commerce Stores",
   "Coaches & Consultants",
   'Cleaning Services',
+  "Fitness & Wellness",
+  "Internet Service Providers",
+  "Real Estate",  
   "Social Media Managers",
   "Restaurants & Cafes",
-  "Internet Service Providers",
-  "Photographers",
+  "Creative Agencies",
+  "Personal Brands",
+  "E Books & Courses",
+  "Crowdfunding Platforms",
 ];
 
 const ExperienceSection = () => {
@@ -64,11 +69,7 @@ const ExperienceSection = () => {
               }}
             >
               <h2
-                className="font-normal leading-[1.1] text-[#1a1a1a]"
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: "clamp(2.8rem, 5vw, 4.5rem)",
-                }}
+                className="font-normal leading-[1.1] text-[#1a1a1a] font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
               >
                 Industries I've Worked With
               </h2>

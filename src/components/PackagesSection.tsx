@@ -113,12 +113,12 @@ const PackagesSection = () => {
               </div>
               <div>
                 <Deliverable
-                  bold="Professional SEO setup"
-                  normal="from day one"
+                  bold="SEO, analytics and copywriting"
+                  normal="for a strong launch"
                 />
                 <Deliverable
                   bold="Free hosting setup"
-                  normal="and domain guidance"
+                  normal="& domain guidance"
                 />
                 <Deliverable bold="30 days" normal="of post-launch support" />
               </div>
@@ -211,7 +211,7 @@ const PackagesSection = () => {
             />
 
             <PriceBlock
-              price="£500–£800"
+              price="£500–£1000"
               turnaround="3–4 weeks turnaround"
               note="2-month payment plans available"
             />
@@ -331,7 +331,7 @@ const PackagesSection = () => {
             />
 
             <PriceBlock
-              price="£1,000+"
+              price="£1,500+"
               turnaround="6–8 weeks turnaround"
               note="3-month payment plans available"
             />

@@ -13,6 +13,12 @@ const faqs = [
       "Cookie-cutter designs, bloated page builders, or a site that falls apart the moment you try to update it. I don't do rushed work, vague timelines, or projects I'm not confident I can do justice. If it's not the right fit, I'll tell you upfront.",
     bg: "bg-charcoal/90 text-[#ffffff]",
   },
+  {
+    question: "WHO AM I, EXACTLY...",
+    answer:
+      "A solo developer — not an agency, not a team. Just me. I work directly with every client from brief to launch, which means faster communication, lower overhead, and no account managers playing telephone between you and the person actually building your site. Every project gets my full attention.",
+    bg: "bg-charcoal/90 text-[#ffffff]",
+  },
 ];
 
 const FAQ = () => {

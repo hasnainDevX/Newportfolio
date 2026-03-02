@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
   return (
     <div className="relative py-20">
       {/* Title - Will be pinned */}
-      <div ref={headerRef} className="text-center mb-32">
+      <div ref={headerRef} className="text-center mb-32 px-6">
         <h2 className="text-5xl md:text-6xl lg:text-7xl mb-4" style={{ fontFamily: "Libre Caslon Text, serif" }}>
           My favourite <span className="">quotes</span>
         </h2>

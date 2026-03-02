@@ -4,6 +4,7 @@ import image2 from "../../assets/allingoodhans2.png";
 import image4 from "../../assets/randomportfolio.png";
 import image1 from "../../assets/maceysmethod4.png";
 import image3 from "../../assets/rlestatesite.png";
+import { Link } from "react-router-dom";
 
 const AboutHero = () => {
   const [currentIdx, setcurrentIdx] = useState(0);
@@ -76,9 +77,11 @@ const AboutHero = () => {
             feels like home and keeps paying off for years to come.
           </h4>
           {/* Button */}
+          <Link to="/enquiry">
           <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
-            Apply
+            Enquire Now
           </button>
+          </Link>
         </div>
       </div>
     </div>

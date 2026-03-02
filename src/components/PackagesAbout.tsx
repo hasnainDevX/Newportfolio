@@ -1,4 +1,7 @@
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+import leftImage from "../assets/ecomsite1.jpeg";
+import rightImage from "../assets/image2.png";
 const PackagesAbout = () => {
   return (
     <div className="w-full min-h-screen flex flex-col md:py-20">
@@ -7,8 +10,8 @@ const PackagesAbout = () => {
         {/* Left image */}
         <div className="md:block hidden w-[12%] relative overflow-hidden">
           <img
-            src="https://www.belle-creative.co.uk/cdn/shop/files/Shopify_eCommerce_Webites_1.jpg?v=1767095179"
-            alt="Shopify eCommerce Websites"
+            src={leftImage}
+            alt="Left Image"
             className="w-full h-full object-cover"
           />
         </div>
@@ -41,17 +44,18 @@ const PackagesAbout = () => {
               next level of your business.
             </p>
           </div>
-
-          <button className="px-16 py-3 bg-soft-beige cursor-pointer border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
-            Explore Packages
-          </button>
+          <Link to="/packages">
+            <button className="px-16 py-3 bg-soft-beige cursor-pointer border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+              Explore Packages
+            </button>
+          </Link>
         </div>
 
         {/* Right image */}
         <div className="w-[12%] relative overflow-hidden md:block hidden">
           <img
-            src="https://www.belle-creative.co.uk/cdn/shop/files/shopify-site-design-25.webp?v=1767104004"
-            alt="Shopify site design"
+            src={rightImage}
+            alt="Right Image"
             className="w-full h-full object-cover"
           />
         </div>

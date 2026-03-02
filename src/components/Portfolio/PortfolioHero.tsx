@@ -24,7 +24,7 @@ const EnquiryHero = () => {
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
           <div
             className="flex whitespace-nowrap"
-            style={{ animation: "heromarquee 18s linear infinite" }}
+            style={{ animation: "heromarquee 59s linear infinite", width: "max-content" }}
           >
             {Array.from({ length: 4 }).map((_, i) => (
               <span
@@ -38,6 +38,12 @@ const EnquiryHero = () => {
           </div>
         </div>
       </div>
+      <style>{`
+        @keyframes heromarquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </div>
   );
 };

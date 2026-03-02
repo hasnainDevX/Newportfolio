@@ -40,10 +40,12 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [cards.length]);
 
+  const isLast = currentIndex === cards.length - 1;
+
   return (
     <div
       ref={containerRef}
-      className="relative w-full "
+      className="relative w-full"
       style={{ height: `${cards.length * 100}vh` }}
     >
       <div className="sticky top-0 h-screen w-full flex items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8">
@@ -51,11 +53,10 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
           {cards.map((card, i) => (
             <div
               key={card.id}
-              className={`absolute inset-0 transition-opacity duration-500  ${
+              className={`absolute inset-0 transition-opacity duration-500 ${
                 i === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
             >
-              {/* Mobile: Stacked Layout */}
               <div className="flex flex-col md:flex-row h-full">
                 {/* Image Section */}
                 <div className="w-full md:w-2/5 h-[35%] sm:h-[40%] md:h-full relative overflow-hidden">
@@ -69,7 +70,6 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                 {/* Content Section */}
                 <div className="w-full md:w-3/5 h-[65%] sm:h-[60%] md:h-full p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 flex flex-col justify-center font-sans">
                   <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 max-w-2xl">
-                    {/* Title */}
                     <h2
                       className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-charcoal font-playfair"
                       style={{ fontFamily: "Libre Caslon Text, serif" }}
@@ -77,12 +77,10 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                       {card.title}
                     </h2>
 
-                    {/* Description */}
                     <p className="text-gray-800 leading-relaxed text-[15px] sm:text-base md:text-lg lg:text-xl font-light">
                       {card.description}
                     </p>
 
-                    {/* WIF Section */}
                     <div className="rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-soft-beige md:bg-yellowish/50 bg-yellowish/30">
                       <h3 className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] sm:tracking-[0.15em] mb-2 sm:mb-3 text-charcoal">
                         Who Is This For?
@@ -92,15 +90,13 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                       </p>
                     </div>
 
-                    {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-3 md:pt-4">
-                      {/* Button */}
-                      <Link to="/enquiry" >
+                      <Link to="/enquiry">
                         <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer w-full md:w-auto">
                           Get Started
                         </button>
                       </Link>
-                      <Link to="/packages" >
+                      <Link to="/packages">
                         <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer w-full md:w-auto">
                           Learn More
                         </button>
@@ -111,8 +107,64 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
               </div>
             </div>
           ))}
+
+        </div>
+
+        {/* ── Scroll indicator — outside the overflow-hidden card ── */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+
+          {/* Dot progress */}
+          <div className="flex gap-2 items-center">
+            {cards.map((_, i) => (
+              <div
+                key={i}
+                className="rounded-full transition-all duration-400"
+                style={{
+                  width: i === currentIndex ? "20px" : "6px",
+                  height: "6px",
+                  backgroundColor:
+                    i === currentIndex ? "#2a2a2a" : "rgba(42,42,42,0.3)",
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Scroll hint — hides on last card */}
+          <div
+            className="flex flex-col items-center gap-1 transition-opacity duration-500"
+            style={{ opacity: isLast ? 0 : 1 }}
+          >
+            <span
+              className="text-[10px] uppercase tracking-[0.2em] text-[#2a2a2a]/50"
+              style={{ fontFamily: "system-ui, sans-serif" }}
+            >
+              scroll
+            </span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              style={{ animation: "scrollBounce 1.6s ease-in-out infinite" }}
+            >
+              <path
+                d="M3 5.5l5 5 5-5"
+                stroke="rgba(42,42,42,0.5)"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes scrollBounce {
+          0%, 100% { transform: translateY(0); opacity: 0.5; }
+          50%       { transform: translateY(4px); opacity: 1; }
+        }
+      `}</style>
     </div>
   );
 };
@@ -121,6 +173,7 @@ import service1 from "../../assets/maceysmethod4.png";
 import service2 from "../../assets/allingoodhans1.png";
 import service3 from "../../assets/telecomsite1.jpeg";
 import { Link } from "react-router-dom";
+
 const Skiper17 = () => {
   const defaultCards = [
     {
@@ -153,7 +206,7 @@ const Skiper17 = () => {
   ];
 
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <StickyCard002 cards={defaultCards} />
     </div>
   );
