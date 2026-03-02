@@ -3,7 +3,6 @@ import Package2Image from "../assets/vasite4.jpeg";
 import Package1Image from "../assets/maceysmethod3.png";
 import Package3Image from "../assets/ecomsite1.jpeg";
 
-// ✓ checkmark + bold key phrase + optional lighter trailing text
 const Deliverable = ({
   bold,
   normal = "",
@@ -27,7 +26,6 @@ const Deliverable = ({
   </div>
 );
 
-// Large serif price + small-caps turnaround — inspired by belle-creative
 const PriceBlock = ({
   price,
   turnaround,
@@ -53,7 +51,7 @@ const PriceBlock = ({
 
 const PackagesSection = () => {
   return (
-    <div className="w-full min-h-screen">
+    <div id="packages-section" className="w-full min-h-screen">
       <hr className="border-t border-gray-500" />
 
       {/* ── 01 The Foundation Site ── */}
@@ -341,6 +339,22 @@ const PackagesSection = () => {
             </button>
           </div>
         </div>
+      </div>
+
+      <div className="border-t border-gray-200 px-8 md:px-16 py-12 text-center">
+        <p className="text-sm text-[#2a2a2a]/60 leading-relaxed max-w-2xl mx-auto font-sans">
+          Need something outside these packages? Custom quotes are available for
+          e-commerce builds, web applications, or anything with specific
+          requirements. All prices are in GBP and exclude domain and hosting
+          renewal costs.{" "}
+          <a
+            href="/enquiry"
+            className="underline underline-offset-2 hover:text-[#2a2a2a] transition-colors duration-200"
+          >
+            Get in touch
+          </a>{" "}
+          and we'll figure out what makes sense.
+        </p>
       </div>
     </div>
   );

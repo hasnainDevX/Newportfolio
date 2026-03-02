@@ -19,10 +19,10 @@ interface FormData {
 }
 
 const budgetOptions = [
-  "£200 – £500 GBP",
-  "£500 – £1000 GBP",
-  "£1000 – £2000 GBP",
-  "£2,000+ GBP",
+  "£200 – £500",
+  "£500 – £1000",
+  "£1000 – £2000",
+  "£2,000+",
 ];
 
 const timelineOptions = [
@@ -128,17 +128,36 @@ const ContactForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs.send(
-      "service_oc2uvzh",
-      "template_t27tg5c",
-      {first_name: formData.firstName, last_name: formData.lastName, email: formData.email, business_name: formData.businessName, website: formData.website, social_media: formData.socialMedia, location: formData.location, business_position: formData.businessPosition, reviewed_pricing_guide: formData.reviewedPricingGuide, budget: formData.budget, timeline: formData.timeline, referral_source: formData.referralSource, additional_info: formData.additionalInfo},
-      "LnufNtBlctM0A6DHN"
-    ).then(() => {
-      setSubmitted(true);
-    }).catch((error) => {
-      console.error("Email sending error:", error);
-      alert("There was an error submitting your enquiry. Please try again later.");
-    });
+    emailjs
+      .send(
+        "service_oc2uvzh",
+        "template_t27tg5c",
+        {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          business_name: formData.businessName,
+          website: formData.website,
+          social_media: formData.socialMedia,
+          location: formData.location,
+          business_position: formData.businessPosition,
+          reviewed_pricing_guide: formData.reviewedPricingGuide,
+          budget: formData.budget,
+          timeline: formData.timeline,
+          referral_source: formData.referralSource,
+          additional_info: formData.additionalInfo,
+        },
+        "LnufNtBlctM0A6DHN",
+      )
+      .then(() => {
+        setSubmitted(true);
+      })
+      .catch((error) => {
+        console.error("Email sending error:", error);
+        alert(
+          "There was an error submitting your enquiry. Please try again later.",
+        );
+      });
   };
 
   if (submitted) {
@@ -227,7 +246,8 @@ const ContactForm = () => {
         {/* Business Name */}
         <div>
           <label htmlFor="businessName" className={labelCls}>
-            Business Name + What You Do (give me the quick version)<span className="text-[#A68B44]">*</span>
+            Business Name + What You Do (give me the quick version)
+            <span className="text-[#A68B44]">*</span>
           </label>
           <input
             type="text"
@@ -319,7 +339,8 @@ const ContactForm = () => {
         {/* Budget */}
         <div className="space-y-4">
           <label className={labelCls}>
-            Where does your budget roughly fall?
+            Where does your budget roughly fall? (All prices in GBP). All
+            budgets are welcome, this just helps me understand the scope
             <span className="text-[#A68B44]">*</span>
           </label>
           <div className="flex flex-wrap gap-3">
@@ -410,14 +431,6 @@ const ContactForm = () => {
           </svg>
         </div>
 
-        {/* Referral Name */}
-        {/* <div>
-          <label htmlFor="referralName" className={labelCls}>
-            If you found us via word of mouth, who can we thank?
-          </label>
-          <input type="text" id="referralName" name="referralName" value={formData.referralName} onChange={handleChange} className={inputCls} />
-        </div> */}
-
         {/* Additional Info */}
         <div>
           <label htmlFor="additionalInfo" className={labelCls}>
@@ -451,6 +464,13 @@ const ContactForm = () => {
           </button>
         </div>
       </form>
+      <div className="border-t border-gray-200 px-8 md:px-16 py-12 text-center mt-12">
+        <p className="text-sm text-[#2a2a2a]/50 leading-relaxed max-w-2xl mx-auto font-sans">
+          No commitment required — submitting this form is just the start of a
+          conversation. I'll review your enquiry and get back to you within 48
+          hours.
+        </p>
+      </div>
     </div>
   );
 };

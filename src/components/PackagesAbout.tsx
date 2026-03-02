@@ -15,33 +15,35 @@ const PackagesAbout = () => {
             className="w-full h-full object-cover"
           />
         </div>
-  
+
         {/* Center text */}
         <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-[4.5rem] py-16 text-center bg-white space-y-12">
-           <img src={logo} alt="Enquiry About" className="w-20 h-20" />
-        
-          <h1 className="text-3xl sm:text-4xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0 font-playfair md:capitalize uppercase tracking-wide text-charcoal ">
-            Skip the chaos of DIY design and launch with a Custom coded site
-            that performs as good as it looks
+          <img src={logo} alt="Enquiry About" className="w-20 h-20" />
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0 font-playfair md:capitalize uppercase tracking-wide text-charcoal">
+            Your website should be working for you — not just sitting there
+            looking pretty
           </h1>
 
           <div className="max-w-3xl space-y-5 text-gray-800 md:text-base text-sm leading-relaxed font-sans">
             <p>
-              Growth isn't just about looking better. It's about performing
-              better. It's about guiding your customers from click to checkout
-              with ease, trust and intention. It's about building a Shopify
-              experience that doesn't just match your product quality, it
-              amplifies it.
+              Most small business websites have the same problem — they were
+              built quickly, on a budget, or on a builder that was never
+              designed to grow with you. They look fine. But fine doesn't
+              convert. Fine doesn't load in under two seconds. Fine doesn't make
+              someone trust you enough to buy.
             </p>
             <p>
-              At Belle Creative, we marry conversion psychology, elevated
-              merchandising and bespoke design to craft Shopify experiences that
-              feel as polished as a flagship boutique.
+              Every package here is custom-coded from scratch — no templates, no
+              drag-and-drop shortcuts, no bloated plugins slowing things down.
+              Just clean, intentional code built around what your business
+              actually needs, and designed to give the kind of first impression
+              that makes people stay.
             </p>
             <p>
-              If you're ready to stop forcing your brand into a box it was never
-              meant to fit into, we'll custom build something that unlocks the
-              next level of your business.
+              Whether you're launching for the first time or ready to replace
+              something that's been holding you back — there's a package built
+              for where you are right now, and where you're going next.
             </p>
           </div>
           <Link to="/packages">

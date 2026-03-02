@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import AnnouncementBar from "../components/AnnouncementBar";
-import packagesHero from "../assets/vasite2.jpeg"
+import packagesHero from "../assets/vasite2.jpeg";
 
 const PackagesHero = () => {
   return (
@@ -24,9 +24,7 @@ const PackagesHero = () => {
         </div>
 
         {/* RIGHT — content */}
-        <div
-          className="w-full md:w-1/2 flex flex-col justify-center px-10 sm:px-14 md:px-16 lg:px-20 py-24 md:py-32"
-        >
+        <div className="w-full md:w-1/2 flex flex-col justify-center px-10 sm:px-14 md:px-16 lg:px-20 py-24 md:py-32">
           {/* Eyebrow label */}
           <p
             className="text-xs tracking-[0.22em] uppercase font-sans font-semibold mb-7"
@@ -55,10 +53,11 @@ const PackagesHero = () => {
             className="w-10 h-px mb-10"
             style={{ backgroundColor: "#b5973a" }}
           />
-
-          <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
-            View Packages
-          </button>
+          <a href="#packages-section">
+            <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+              View Packages
+            </button>
+          </a>
         </div>
       </div>
     </div>
