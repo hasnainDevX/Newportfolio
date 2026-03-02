@@ -9,12 +9,7 @@ import { Link } from "react-router-dom";
 const AboutHero = () => {
   const [currentIdx, setcurrentIdx] = useState(0);
 
-  const images = [
-    image1,
-    image2,
-    image3,
-    image4,
-  ];
+  const images = [image1, image2, image3, image4];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,7 +17,7 @@ const AboutHero = () => {
     }, 2500);
     return () => clearInterval(interval);
   }, [images.length]);
-  
+
   return (
     <div className="bg-cover bg-center bg-no-repeat relative bg-[#FFFCF9]">
       <header className="relative z-50">
@@ -38,11 +33,9 @@ const AboutHero = () => {
 
         {/* Main Heading */}
         <div>
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0 font-libre-caslon! md:capitalize uppercase tracking-wide"
-          >
-            Strategic website design for creative business owners who want their brand
-            to be noticed, trusted, & remembered
+          <h1 className="text-3xl sm:text-4xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0 font-libre-caslon! md:capitalize uppercase tracking-wide">
+            Strategic website design for creative business owners who want their
+            brand to be noticed, trusted, & remembered
           </h1>
         </div>
 
@@ -67,21 +60,57 @@ const AboutHero = () => {
         {/* Sub content and Cta  */}
         <div className="container max-w-xl mx-auto py-10 space-y-6">
           <h3 className="md:text-lg font-medium mt-8 text-gray-700 font-playfair uppercase tracking-wide">
-            We build websites for ambitious businesses that are just as memorable as they are functional.
+            We build websites for ambitious businesses that are just as
+            memorable as they are functional.
           </h3>
           <h4 className="font-sans text-gray-600 leading-relaxed">
-            Working with a new developer shouldn't feel like handing your brand to a stranger and hoping for the best. Every project starts with understanding your business properly — what you do, who you're talking to, and what you actually need the site to do. From there it's built from scratch, with you involved the whole way through.
+            Working with a new developer shouldn't feel like handing your brand
+            to a stranger and hoping for the best. Every project starts with
+            understanding your business properly — what you do, who you're
+            talking to, and what you actually need the site to do. From there
+            it's built from scratch, with you involved the whole way through.
           </h4>
           {/* Button */}
           <Link to="/enquiry">
-          <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
-            Enquire Now
-          </button>
+            <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+              Enquire Now
+            </button>
           </Link>
+        </div>
+
+        {/* Rotating circular text element */}
+        <div className="hidden md:block absolute top-[24vh] -right-[10vh] w-52 h-52 z-10 2xl:scale-125">
+          <div
+            className="absolute inset-0 animate-spin"
+            style={{ animationDuration: "15s" }}
+          >
+            <svg
+              width="224"
+              height="224"
+              viewBox="0 0 224 224"
+              className="absolute inset-0"
+            >
+              <defs>
+                <path
+                  id="circle"
+                  d="M 112,112 m -90,0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0"
+                />
+              </defs>
+              <text
+                fill="black"
+                fontSize="16"
+                fontWeight="300"
+                letterSpacing="3px"
+                fontFamily="'Inter', 'Helvetica Neue', sans-serif"
+              >
+                <textPath href="#circle">• Hasnain Webworks • Web Design and Development</textPath>
+              </text>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
-  );
+  ); 
 };
 
 export default AboutHero;
