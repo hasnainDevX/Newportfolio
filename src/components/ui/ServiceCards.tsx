@@ -81,7 +81,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                       {card.description}
                     </p>
 
-                    <div className="rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-soft-beige md:bg-yellowish/50 bg-yellowish/30">
+                    <div className="rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-gold md:bg-yellowish/50 bg-yellowish/30">
                       <h3 className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] sm:tracking-[0.15em] mb-2 sm:mb-3 text-charcoal">
                         Who Is This For?
                       </h3>
@@ -114,8 +114,8 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
 
           {/* Dot progress */}
-          <div className="flex gap-2 items-center">
-            {cards.map((_, i) => (
+          <div className="flex gap-0 items-center mt-1">
+            {/* {cards.map((_, i) => (
               <div
                 key={i}
                 className="rounded-full transition-all duration-400"
@@ -126,7 +126,7 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                     i === currentIndex ? "#2a2a2a" : "rgba(42,42,42,0.3)",
                 }}
               />
-            ))}
+            ))} */}
           </div>
 
           {/* Scroll hint — hides on last card */}
@@ -135,14 +135,14 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
             style={{ opacity: isLast ? 0 : 1 }}
           >
             <span
-              className="text-[10px] uppercase tracking-[0.2em] text-[#2a2a2a]/50"
+              className="text-[12px] md:text-base uppercase tracking-[0.2em] text-[#2a2a2a]/80"
               style={{ fontFamily: "system-ui, sans-serif" }}
             >
               scroll
             </span>
             <svg
-              width="16"
-              height="16"
+              width="26"
+              height="26"
               viewBox="0 0 16 16"
               fill="none"
               style={{ animation: "scrollBounce 1.6s ease-in-out infinite" }}
