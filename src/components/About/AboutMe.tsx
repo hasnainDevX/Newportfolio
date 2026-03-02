@@ -35,7 +35,7 @@ const AboutMe = () => {
 
         {/* RIGHT: Text */}
         <div className="flex flex-col gap-7">
-          <h2 className="font-libre-caslon italic text-[2.4rem] sm:text-5xl lg:text-6xl text-[#1a1a1a] leading-[1.1] tracking-tight">
+          <h2 className="font-libre-caslon italic text-[2.4rem] sm:text-5xl lg:text-6xl text-[#1a1a1a] leading-[1.1] tracking-tight md:mt-0 mt-4">
             Hi, I'm Hasnain.
           </h2>
 

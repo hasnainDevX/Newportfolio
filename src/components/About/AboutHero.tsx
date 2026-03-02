@@ -19,7 +19,7 @@ const AboutHero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setcurrentIdx((prevIdx) => (prevIdx + 1) % images.length);
-    }, 3000);
+    }, 2500);
     return () => clearInterval(interval);
   }, [images.length]);
   
@@ -41,8 +41,8 @@ const AboutHero = () => {
           <h1
             className="text-3xl sm:text-4xl md:text-5xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0 font-libre-caslon! md:capitalize uppercase tracking-wide"
           >
-            Strategic website design for creative founders who want their brand
-            to be seen, felt, and remembered
+            Strategic website design for creative business owners who want their brand
+            to be noticed, trusted, & remembered
           </h1>
         </div>
 
@@ -67,14 +67,10 @@ const AboutHero = () => {
         {/* Sub content and Cta  */}
         <div className="container max-w-xl mx-auto py-10 space-y-6">
           <h3 className="md:text-lg font-medium mt-8 text-gray-700 font-playfair uppercase tracking-wide">
-            We help creative founders build websites that are not just
-            functional, but also memorable.
+            We build websites for ambitious businesses that are just as memorable as they are functional.
           </h3>
           <h4 className="font-sans text-gray-600 leading-relaxed">
-            Together, we’ll turn the once overwhelming and uncertain experience
-            of creating your website into a collaborative, clarity-filled
-            process that gives you a site designed to grow with you—one that
-            feels like home and keeps paying off for years to come.
+            Working with a new developer shouldn't feel like handing your brand to a stranger and hoping for the best. Every project starts with understanding your business properly — what you do, who you're talking to, and what you actually need the site to do. From there it's built from scratch, with you involved the whole way through.
           </h4>
           {/* Button */}
           <Link to="/enquiry">

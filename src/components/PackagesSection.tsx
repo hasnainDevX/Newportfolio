@@ -2,6 +2,7 @@ import Package11Image from "../assets/vasite3.jpeg";
 import Package2Image from "../assets/vasite4.jpeg";
 import Package1Image from "../assets/maceysmethod3.png";
 import Package3Image from "../assets/ecomsite1.jpeg";
+import { Link } from "react-router-dom";
 
 const Deliverable = ({
   bold,
@@ -123,10 +124,11 @@ const PackagesSection = () => {
             </div>
 
             <PriceBlock price="£200–£400" turnaround="1–2 weeks turnaround" />
-
-            <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
-              Book The Foundation Site
-            </button>
+            <Link to="/enquiry">
+              <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+                Book The Foundation Site
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -213,10 +215,11 @@ const PackagesSection = () => {
               turnaround="3–4 weeks turnaround"
               note="2-month payment plans available"
             />
-
-            <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
-              Book The Signature Site
-            </button>
+            <Link to="/enquiry">
+              <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+                Book The Signature Site
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -333,10 +336,11 @@ const PackagesSection = () => {
               turnaround="6–8 weeks turnaround"
               note="3-month payment plans available"
             />
-
-            <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
-              Book The Complete Vision
-            </button>
+            <Link to="/enquiry">
+              <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
+                Book The Complete Vision
+              </button>
+            </Link>
           </div>
         </div>
       </div>

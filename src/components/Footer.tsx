@@ -126,7 +126,7 @@ const Footer = () => {
               Newsletter
             </h3>
             <p className="text-xs leading-relaxed mb-5 text-white/80">
-              Thoughts, inspiration and digital joy delivered to your inbox.
+              Tips, resources and occasional updates and digital joy will be delivered to your inbox.
             </p>
 
             {status === "success" ? (

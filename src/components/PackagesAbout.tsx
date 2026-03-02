@@ -46,9 +46,9 @@ const PackagesAbout = () => {
               for where you are right now, and where you're going next.
             </p>
           </div>
-          <Link to="/packages">
+          <Link to="/enquiry">
             <button className="px-16 py-3 bg-soft-beige cursor-pointer border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
-              Explore Packages
+              Enquire Now
             </button>
           </Link>
         </div>

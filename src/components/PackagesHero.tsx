@@ -38,13 +38,11 @@ const PackagesHero = () => {
             className="font-libre-caslon font-normal leading-[1.1] text-4xl sm:text-5xl lg:text-[3.4rem] mb-8"
             style={{ color: "#2a2a2a" }}
           >
-            Your brand story is <br className="hidden lg:block" />
-            highly personal.{" "}
-            <em
-              className="block mt-2"
-              style={{ color: "#b5973a", fontStyle: "italic" }}
-            >
-              That's why my process always starts with brand strategy.
+            Your website is often the first impression{" "}
+            <br className="hidden lg:block" />
+            Let's make sure it's the right one.{" "}
+            <em style={{ color: "#b5973a", fontStyle: "italic" }}>
+              That's why every project starts with Brand Strategy.
             </em>
           </h1>
 

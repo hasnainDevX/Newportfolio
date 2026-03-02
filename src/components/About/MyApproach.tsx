@@ -43,7 +43,7 @@ const MobileCell = ({
   idx: number;
   visible: boolean;
 }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <div
