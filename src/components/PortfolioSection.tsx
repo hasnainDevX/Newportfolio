@@ -8,12 +8,7 @@ import portfolio4 from "../assets/rlestatesite.png";
 const PortfolioSection = () => {
   const [currentIdx, setcurrentIdx] = useState(0);
 
-  const images = [
-    portfolio1,
-    portfolio2,
-    portfolio3,
-    portfolio4,
-  ];
+  const images = [portfolio1, portfolio2, portfolio3, portfolio4];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,10 +27,10 @@ const PortfolioSection = () => {
           Project <span className="">Spotlight</span>
         </h1>
         <h4 className="text-sm md:text-xl px-4 md:px-16 text-center text-[#2A2A2A] max-w-7xl mx-auto">
-          Maybe you’ve outgrown the site that once felt perfect. Maybe your
-          brand’s next chapter is bigger than the online space it currently sits
-          in. Or perhaps you’re tired of choosing between beauty or performance,
-          knowing you deserve both.
+          Every site was built from scratch — no templates, no shortcuts. Each
+          one designed around a specific business, a specific audience, and a
+          specific goal. Browse the work and see what's possible when the code
+          actually fits the brand.
         </h4>
       </div>
       <div className="card border border-dashed border-charcoal/40 max-w-5xl mx-auto shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-xl bg-white">
@@ -45,13 +40,15 @@ const PortfolioSection = () => {
             <span className="text-gold">Portfolio</span>
           </h2>
           <p className="font-light text-[15px] sm:text-base md:text-[17px] lg:text-lg leading-relaxed sm:leading-relaxed md:leading-loose font-lato text-charcoal/75 max-w-xl">
-            West & Co. Travel set out to bring a fresh sense of luxury to
-            travel—elevated, effortless, and full of charm. Inspired by Santa
-            Barbara's coastal ease, we crafted a brand that blends casual
-            sophistication with playful wanderlust
+            Some are service businesses. Some are e-commerce. All of them needed
+            something that actually worked — not just looked good. That's what's
+            in here.
           </p>
           <div className="pt-2 sm:pt-3">
-            <Link to="/portfolio" className="text-charcoal hover:text-soft-beige">
+            <Link
+              to="/portfolio"
+              className="text-charcoal hover:text-soft-beige"
+            >
               <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
                 View Portfolios
               </button>

@@ -12,17 +12,17 @@ const Footer = () => {
     setStatus("loading");
     emailjs
       .send(
-        "your_service_id",
-        "your_newsletter_template_id",
+        "service_oc2uvzh",
+        "template_ckxo08e",
         { from_name: firstName, from_email: email },
-        "your_public_key",
+        "LnufNtBlctM0A6DHN",
       )
       .then(() => { setStatus("success"); setEmail(""); setFirstName(""); })
       .catch(() => setStatus("error"));
   };
 
   return (
-    <footer className="bg-gold text-white rounded-t-4xl">
+    <footer className="bg-gold/95 md:bg-gold text-white md:rounded-t-4xl">
       <div className="max-w-6xl mx-auto px-8 pt-20 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
 
@@ -176,11 +176,11 @@ const Footer = () => {
       <div className="border-t border-white/20">
         <div className="max-w-6xl mx-auto px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-base space-y-4 md:space-y-0 text-white/70">
-            <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+            {/* <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm">
               <Link to="/terms-and-conditions" className="hover:text-white transition-colors duration-200">
                 Terms & Conditions
               </Link>
-            </div>
+            </div> */}
             <p className="te">© {new Date().getFullYear()} Hasnain Webworks</p>
           </div>
         </div>
