@@ -4,6 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import ScrollToTop from "./components/ScrollToTop";
+import { inject } from "@vercel/analytics";
+
+inject();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

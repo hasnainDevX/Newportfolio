@@ -1,11 +1,34 @@
 import { Skiper17 } from "./ui/ServiceCards";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
+gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
   // Dynamic height calculation: 3 cards × 150vh per card + 50vh for heading
   const numberOfCards = 3;
   const heightPerCard = 100; // vh per card
   const headingSpace = 10; // vh for heading section
   const totalHeight = numberOfCards * heightPerCard + headingSpace;
+
+  const labelRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const paraRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: labelRef.current,
+        start: "top 85%",
+        once: true,
+      },
+      defaults: { ease: "power3.out" },
+    });
+
+    tl.fromTo(labelRef.current, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6 })
+      .fromTo(headingRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, "-=0.3")
+      .fromTo(paraRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, "-=0.4");
+  }, []);
 
   return (
     <div 

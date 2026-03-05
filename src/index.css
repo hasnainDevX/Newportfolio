@@ -18,7 +18,10 @@
   font-style: normal;
   font-display: swap;
 } */
-e
+/* html, body {
+  overflow-x: hidden;
+} */
+
 body {
   background-color: #FFFCF9;
   color: #2a2a2a;
@@ -36,7 +39,7 @@ body {
   --color-soft-beige: #e8dfd5;
   --color-muted-sage: #a8998c;
   --color-gold: #b5973a;
-
+  
   --font-lato: "Lato", sans-serif;
   --font-playfair: "Playfair Display", serif;
   --font-podium-soft: "Podium Soft", sans-serif;
