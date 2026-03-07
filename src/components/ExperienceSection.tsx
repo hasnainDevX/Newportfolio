@@ -1,14 +1,18 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const industries = [
   "Virtual Assistants",
   "E-commerce Stores",
   "Coaches & Consultants",
-  'Cleaning Services',
+  "Cleaning Services",
   "Fitness & Wellness",
   "Internet Service Providers",
-  "Real Estate",  
+  "Real Estate",
   "Social Media Managers",
   "Restaurants & Cafes",
   "Creative Agencies",
@@ -18,21 +22,74 @@ const industries = [
 ];
 
 const ExperienceSection = () => {
-  const [visible, setVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const eyebrowRef = useRef<HTMLParagraphElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const ruleRef = useRef<HTMLDivElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const tagsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.15 },
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          once: true,
+        },
+      });
+
+      // Left column — staggered fade-up
+      tl.fromTo(
+        eyebrowRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
+      )
+        .fromTo(
+          headingRef.current,
+          { opacity: 0, y: 28 },
+          { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+          "-=0.35"
+        )
+        .fromTo(
+          ruleRef.current,
+          { opacity: 0, scaleX: 0, transformOrigin: "left" },
+          { opacity: 1, scaleX: 1, duration: 0.5, ease: "power2.out" },
+          "-=0.3"
+        )
+        .fromTo(
+          subtitleRef.current,
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          "-=0.25"
+        )
+        .fromTo(
+          ctaRef.current,
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          "-=0.25"
+        );
+
+      // Tags — staggered batch reveal
+      if (tagsRef.current) {
+        const tags = tagsRef.current.querySelectorAll(".tag-item");
+        tl.fromTo(
+          tags,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.06,
+          },
+          "-=0.4"
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -41,78 +98,46 @@ const ExperienceSection = () => {
       className="w-full bg-slate-50 px-6 md:px-16 lg:px-24 py-24 md:py-32 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
-        {/* ── Two-col layout on desktop, stacked on mobile ── */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-16 lg:gap-24">
-          {/* Left — sticky heading column */}
+          {/* Left — heading column */}
           <div className="lg:w-2/5 lg:sticky lg:top-32">
-            {/* Eyebrow */}
-            <div
-              className="transition-all duration-700"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(24px)",
-                transitionDelay: "0ms",
-              }}
+            <p
+              ref={eyebrowRef}
+              className="text-xs tracking-[0.4em] uppercase text-[#b5973a] font-sans mb-6"
+              style={{ opacity: 0 }}
             >
-              <p className="text-xs tracking-[0.4em] uppercase text-[#b5973a] font-sans mb-6">
-                Experience
-              </p>
-            </div>
+              Experience
+            </p>
 
-            {/* Heading */}
-            <div
-              className="transition-all duration-700"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(24px)",
-                transitionDelay: "100ms",
-              }}
+            <h2
+              ref={headingRef}
+              className="font-normal leading-[1.1] text-[#1a1a1a] font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+              style={{ opacity: 0 }}
             >
-              <h2
-                className="font-normal leading-[1.1] text-[#1a1a1a] font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-              >
-                Industries I've Worked With
-              </h2>
-            </div>
+              Industries I've Worked With
+            </h2>
 
-            {/* Thin rule */}
             <div
-              className="transition-all duration-700 mt-8"
+              ref={ruleRef}
+              className="mt-8"
               style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "scaleX(1)" : "scaleX(0)",
-                transformOrigin: "left",
-                transitionDelay: "200ms",
+                opacity: 0,
                 height: "1px",
                 width: "48px",
                 backgroundColor: "#d6c9b8",
               }}
             />
 
-            {/* Subtitle */}
-            <div
-              className="transition-all duration-700 mt-6"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(16px)",
-                transitionDelay: "300ms",
-              }}
+            <p
+              ref={subtitleRef}
+              className="text-charcoal font-sans leading-relaxed max-w-xs mt-6"
+              style={{ opacity: 0 }}
             >
-              <p className="text-charcoal font-sans leading-relaxed max-w-xs">
-                From solopreneurs to established studios — if you have a vision,
-                we know how to bring it to life online.
-              </p>
-            </div>
+              From solopreneurs to established studios — if you have a vision,
+              we know how to bring it to life online.
+            </p>
 
-            {/* CTA */}
-            <div
-              className="transition-all duration-700 mt-10"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(16px)",
-                transitionDelay: "400ms",
-              }}
-            >
+            <div ref={ctaRef} className="mt-10" style={{ opacity: 0 }}>
               <Link to="/portfolio">
                 <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
                   See Portfolio
@@ -121,20 +146,11 @@ const ExperienceSection = () => {
             </div>
           </div>
 
-          {/* Right — tag cloud with staggered reveal */}
+          {/* Right — tag cloud */}
           <div className="lg:w-3/5">
-            <div className="flex flex-wrap gap-3">
+            <div ref={tagsRef} className="flex flex-wrap gap-3">
               {industries.map((industry, idx) => (
-                <div
-                  key={idx}
-                  className="transition-all duration-600 group"
-                  style={{
-                    opacity: visible ? 1 : 0,
-                    transform: visible ? "translateY(0)" : "translateY(20px)",
-                    transitionDelay: `${300 + idx * 60}ms`,
-                    transitionDuration: "600ms",
-                  }}
-                >
+                <div key={idx} className="tag-item group" style={{ opacity: 0 }}>
                   <span
                     className="inline-flex items-center gap-2 px-5 py-3 border font-sans text-sm cursor-default select-none
                       transition-all duration-300
@@ -145,25 +161,14 @@ const ExperienceSection = () => {
                       borderRadius: "100px",
                     }}
                   >
-                    {/* Small diamond accent */}
-                    <span
-                      className="w-1.5 h-1.5 rounded-full shrink-0 transition-colors duration-300 group-hover:bg-white hover:text-white hover:bg-white bg-gold"
-                    />
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0 transition-colors duration-300 group-hover:bg-white bg-gold" />
                     {industry}
                   </span>
                 </div>
               ))}
 
               {/* "& more" pill */}
-              <div
-                className="transition-all duration-600"
-                style={{
-                  opacity: visible ? 1 : 0,
-                  transform: visible ? "translateY(0)" : "translateY(20px)",
-                  transitionDelay: `${300 + industries.length * 60}ms`,
-                  transitionDuration: "600ms",
-                }}
-              >
+              <div className="tag-item" style={{ opacity: 0 }}>
                 <span
                   className="inline-flex items-center px-5 py-3 font-sans text-sm italic"
                   style={{ color: "#b5973a", borderRadius: "100px" }}
