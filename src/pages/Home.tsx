@@ -11,7 +11,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 
 const Home = () => {
   return (
-    <div>
+    <div className="smooth-wrapper">
       <div className="hidden md:block">
         <AnnouncementBar />
       </div>

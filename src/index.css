@@ -30,6 +30,19 @@ body {
   padding: 0;
   overflow-x: hidden !important;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+  height: 100vh;
+}
+
+#smooth-content {
+  overflow: visible;
+  will-change: transform;
+}
 
 @theme {
   --color-cream-bg: #f5f2eb;
@@ -44,4 +57,31 @@ body {
   --font-playfair: "Playfair Display", serif;
   --font-podium-soft: "Podium Soft", sans-serif;
   --font-libre-caslon: "Libre Caslon Text", serif;
+}
+
+/* ── Custom Scrollbar ── */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b5973a #e8dfd5;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8dfd5;        /* soft-beige */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b5973a;  /* gold */
+  border-radius: 100px;
+  border: 2px solid #e8dfd5;  /* creates padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2a2a2a;  /* charcoal on hover */
 }
