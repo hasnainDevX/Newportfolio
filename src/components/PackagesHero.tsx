@@ -104,7 +104,7 @@ const PackagesHero = () => {
             style={{ backgroundColor: "#b5973a", opacity: 0 }}
           />
 
-          <a ref={ctaRef} href="#packages-section" style={{ opacity: 0 }}>
+          <a ref={ctaRef} href="#packages-section" aria-label="View packages — scroll to packages section" style={{ opacity: 0 }}>
             <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
               View Packages
             </button>

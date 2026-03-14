@@ -212,7 +212,7 @@ const PackagesSection = () => {
             </div>
 
             <div className="price-block"><PriceBlock price="£200–£400" turnaround="1–2 weeks turnaround" /></div>
-            <Link to="/enquiry">
+            <Link to="/enquiry" aria-label="Book The Foundation Site package">
               <button className="cta-btn px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
                 Book The Foundation Site
               </button>
@@ -259,7 +259,7 @@ const PackagesSection = () => {
             <div className="deliverable-item"><Deliverable bold="60 days" normal="of post-launch support and updates" /></div>
             <div className="deliverable-item"><Deliverable bold="Self-managed content system" normal="— no developer needed" /></div>
             <div className="price-block"><PriceBlock price="£500–£1000" turnaround="3–4 weeks turnaround" note="2-month payment plans available" /></div>
-            <Link to="/enquiry">
+            <Link to="/enquiry" aria-label="Book The Signature Site package">
               <button className="cta-btn px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
                 Book The Signature Site
               </button>
@@ -326,7 +326,7 @@ const PackagesSection = () => {
             <div className="deliverable-item"><Deliverable bold="Ongoing maintenance" normal="and security updates included" /></div>
             <div className="deliverable-item"><Deliverable bold="90 days priority support" normal="with unlimited revisions" /></div>
             <div className="price-block"><PriceBlock price="£1,500+" turnaround="6–8 weeks turnaround" note="3-month payment plans available" /></div>
-            <Link to="/enquiry">
+            <Link to="/enquiry" aria-label="Book The Complete Vision package">
               <button className="cta-btn px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
                 Book The Complete Vision
               </button>
