@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gold/95 md:bg-gold text-white md:rounded-t-4xl">
+    <footer className="bg-gold text-white md:rounded-t-4xl">
       <div className="max-w-6xl mx-auto px-8 pt-20 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
 
@@ -40,7 +40,7 @@ const Footer = () => {
                 { to: "/enquiry", label: "Enquiry" },
               ].map(({ to, label }) => (
                 <li key={to}>
-                  <Link to={to} className="text-white/80 hover:text-white transition-colors duration-200 text-sm">
+                  <Link to={to} className="text-white hover:text-white transition-colors duration-200 text-sm">
                     {label}
                   </Link>
                 </li>
@@ -128,7 +128,7 @@ const Footer = () => {
             <h3 className="text-base font-semibold mb-6 uppercase tracking-widest text-white" style={{ fontFamily: "system-ui, sans-serif" }}>
               Newsletter
             </h3>
-            <p className="text-xs leading-relaxed mb-5 text-white/80">
+            <p className="text-xs leading-relaxed mb-5 text-white">
               Tips, resources and occasional updates and digital joy will be delivered to your inbox.
             </p>
 
