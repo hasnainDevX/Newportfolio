@@ -59,6 +59,7 @@ const Footer = () => {
                 <a
                   href="https://instagram.com/hasnainwebworks"
                   target="_blank"
+                  aria-label="Follow Hasnain Webworks on Instagram"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0"
                   style={{ backgroundColor: "rgba(255,255,255,0.2)", color: "#ffffff" }}
@@ -80,6 +81,7 @@ const Footer = () => {
                 <a
                   href="https://facebook.com/hasnainwebworks"
                   target="_blank"
+                  aria-label="Follow Hasnain Webworks on Facebook"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0"
                   style={{ backgroundColor: "rgba(255,255,255,0.2)", color: "#ffffff" }}
@@ -101,6 +103,7 @@ const Footer = () => {
                 <a
                   href="https://linkedin.com/in/hasnainwebworks"
                   target="_blank"
+                  aria-label="Connect with Hasnain Webworks on LinkedIn"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0"
                   style={{ backgroundColor: "rgba(255,255,255,0.2)", color: "#ffffff" }}
@@ -176,11 +179,6 @@ const Footer = () => {
       <div className="border-t border-white/20">
         <div className="max-w-6xl mx-auto px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-base space-y-4 md:space-y-0 text-white/70">
-            {/* <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm">
-              <Link to="/terms-and-conditions" className="hover:text-white transition-colors duration-200">
-                Terms & Conditions
-              </Link>
-            </div> */}
             <p className="te">© {new Date().getFullYear()} Hasnain Webworks</p>
           </div>
         </div>

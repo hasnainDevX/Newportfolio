@@ -17,7 +17,12 @@ const Home = () => {
       </div>
       <Hero />
       <div className="md:block hidden ribbon">
-        <img className="h-[10vh] w-full" src={ribbon} alt="ribbon" />
+        <img
+          className="h-[10vh] w-full object-cover"
+          src={ribbon}
+          alt="Hasnain Webworks decorative ribbon"
+          style={{ aspectRatio: "auto" }}
+        />
       </div>
       <ImagesMarquee />
       <Services />
