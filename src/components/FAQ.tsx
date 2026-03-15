@@ -58,6 +58,7 @@ const FAQItem = ({ faq }: { faq: FAQ; index: number }) => {
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between text-left py-7 md:py-8 gap-6 group cursor-pointer"
+        aria-label={`${open ? "Close" : "Open"} FAQ: ${faq.question}`}
       >
         <span
           className="text-2xl md:text-3xl lg:text-4xl font-normal leading-snug transition-colors duration-300 group-hover:opacity-70 px-10 md:px-16 lg:px-24"

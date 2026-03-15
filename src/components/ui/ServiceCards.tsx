@@ -91,12 +91,19 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-3 md:pt-4">
-                      <Link to="/enquiry">
+                      <Link
+                        to="/enquiry"
+                        aria-label={`Get started with ${card.title}`}
+                      >
                         <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer w-full md:w-auto">
                           Get Started
                         </button>
                       </Link>
-                      <Link to="/packages" className="hidden md:block">
+                      <Link
+                        to="/packages"
+                        aria-label={`Learn more about ${card.title}`}
+                        className="hidden md:block"
+                      >
                         <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer w-full md:w-auto">
                           Learn More
                         </button>
@@ -107,12 +114,10 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
               </div>
             </div>
           ))}
-
         </div>
 
         {/* ── Scroll indicator — outside the overflow-hidden card ── */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
-
           {/* Dot progress */}
           <div className="flex gap-0 items-center mt-1">
             {/* {cards.map((_, i) => (

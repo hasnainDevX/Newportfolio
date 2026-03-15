@@ -138,7 +138,7 @@ const ExperienceSection = () => {
             </p>
 
             <div ref={ctaRef} className="mt-10" style={{ opacity: 0 }}>
-              <Link to="/portfolio">
+              <Link to="/portfolio" aria-label="See portfolio — view all projects">
                 <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer">
                   See Portfolio
                 </button>

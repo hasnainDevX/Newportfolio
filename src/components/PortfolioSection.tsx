@@ -26,12 +26,12 @@ const PortfolioSection = () => {
         >
           Project <span className="">Spotlight</span>
         </h1>
-        <h4 className="text-sm md:text-xl px-4 md:px-16 text-center text-[#2A2A2A] max-w-7xl mx-auto">
+        <p className="text-sm md:text-xl px-4 md:px-16 text-center text-[#2A2A2A] max-w-7xl mx-auto">
           Every site was built from scratch — no templates, no shortcuts. Each
           one designed around a specific business, a specific audience, and a
           specific goal. Browse the work and see what's possible when the code
           actually fits the brand.
-        </h4>
+        </p>
       </div>
       <div className="card border border-dashed border-charcoal/40 max-w-5xl mx-auto shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-xl bg-white">
         <div className="left-content w-full md:flex-[55%] p-8 sm:p-10 md:p-12 lg:p-16 xl:p-20 space-y-5 sm:space-y-6 md:space-y-7 flex flex-col justify-center">
@@ -48,6 +48,7 @@ const PortfolioSection = () => {
             <Link
               to="/portfolio"
               className="text-charcoal hover:text-soft-beige"
+              aria-label="View portfolio — see all projects"
             >
               <button className="px-16 py-3 cursor-pointer bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300">
                 View Portfolios
