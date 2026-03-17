@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
 import gsap from "gsap";
-
+import heroImage from "../assets/heroimage.avif";
 const Hero = () => {
   const labelRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -57,8 +57,7 @@ const Hero = () => {
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat relative"
       style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1677100091678-1e96b3de3a38?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+        backgroundImage: `url(${heroImage.src})`,
         backgroundColor: "#F9F6F1",
         backgroundAttachment: "fixed",
       }}

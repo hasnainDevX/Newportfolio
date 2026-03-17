@@ -1,5 +1,5 @@
 "use client";
-import { Skiper17 } from "./ui/ServiceCards";
+import { Skiper17 } from "./ServiceCards";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";

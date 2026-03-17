@@ -177,9 +177,9 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
   );
 };
 
-import service1 from "../../assets/maceysmethod4.png";
-import service2 from "../../assets/allingoodhans1.png";
-import service3 from "../../assets/telecomsite1.jpeg";
+import service1 from "../assets/maceysmethod4.png";
+import service2 from "../assets/allingoodhans1.png";
+import service3 from "../assets/telecomsite1.jpeg";
 import Link from "next/link";
 
 const Skiper17 = () => {
