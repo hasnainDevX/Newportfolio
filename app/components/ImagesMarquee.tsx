@@ -63,20 +63,17 @@ const ImagesMarquee = () => {
             }}
           >
             <Image
-              className="marquee-image"
+              className="object-cover"
               src={image.src}
               alt={image.alt}
+              width={300}
+              height={300}
               style={{
-                height: "300px", // h-48
-                width: "300px", // w-72
+                height: "300px",
+                width: "300px",
                 borderRadius: "12px",
-                objectFit: "cover",
-                transform: "translateZ(0)",
-                backfaceVisibility: "hidden",
-                display: "block",
               }}
               loading="eager"
-              decoding="sync"
             />
           </div>
         ))}

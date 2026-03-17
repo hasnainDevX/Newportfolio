@@ -93,8 +93,8 @@ const PackagesAbout = () => {
           <Image
             src={leftImage}
             alt="Left Image"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover" 
           
           />
         </div>
@@ -164,8 +164,8 @@ const PackagesAbout = () => {
           <Image
             src={rightImage}
             alt="Right Image"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover" 
           />
         </div>
       </div>

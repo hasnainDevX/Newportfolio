@@ -109,8 +109,7 @@ const AboutHero = () => {
                 src={image}
                 alt={`Portfolio ${idx + 1}`}
                 className="w-full h-full object-cover"
-                layout="fill"
-                objectFit="cover"
+                fill
               />
             </div>
           ))}

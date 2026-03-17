@@ -101,7 +101,7 @@ const AboutMe = () => {
             className="absolute top-0 left-4 sm:left-10 w-[260px] sm:w-[320px] lg:w-[380px] shadow-2xl z-20 -rotate-6"
             style={{ opacity: 0 }}
           >
-            <Image src={image1} alt="Project" className="w-full h-auto object-cover block" objectFit="cover" />
+            <Image src={image1} alt="Project" className="w-full h-auto object-cover block"  />
           </div>
 
           <div
@@ -109,7 +109,7 @@ const AboutMe = () => {
             className="absolute top-[140px] sm:top-[160px] left-[100px] sm:left-[140px] lg:left-[160px] w-[260px] sm:w-[310px] lg:w-[360px] shadow-2xl z-30 rotate-3"
             style={{ opacity: 0 }}
           >
-            <Image src={image2} alt="Project" className="w-full h-auto object-cover block" objectFit="cover" />
+            <Image src={image2} alt="Project" className="w-full h-auto object-cover block" />
           </div>
 
           <div
@@ -117,7 +117,7 @@ const AboutMe = () => {
             className="absolute top-[300px] sm:top-[340px] left-0 w-[240px] sm:w-[290px] lg:w-[340px] shadow-2xl z-10 -rotate-[4deg]"
             style={{ opacity: 0 }}
           >
-            <Image src={image3} alt="Project" className="w-full max-h-[80%] object-cover block"  objectFit="cover" />
+            <Image src={image3} alt="Project" className="w-full max-h-[80%] object-cover block"  />
           </div>
         </div>
 
