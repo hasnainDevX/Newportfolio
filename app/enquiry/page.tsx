@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import EnquiryAbout from "../components/Enquiry/EnquiryAbout"
 import EnquiryForm from "../components/Enquiry/EnquiryForm"
 import EnquiryHero from "../components/Enquiry/EnquiryHero"
 import FAQSection from "../components/FAQ"
 import Footer from "../components/Footer"
+
+export const metadata: Metadata = {
+  title: "Enquiry | Hasnain Webworks",
+  description: "Ready to start your project? Get in touch with Hasnain Webworks to discuss your website needs and get a custom quote.",
+};
 
 const Enquiry = () => {
   return (

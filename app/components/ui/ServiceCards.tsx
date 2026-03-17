@@ -96,17 +96,18 @@ const StickyCard002 = ({ cards }: { cards: CardData[] }) => {
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-3 md:pt-4">
                       <Link
                         href="/enquiry"
+                        aria-label={`Get started with ${card.title}`}
                       >
-                        <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer w-full md:w-auto" 
-                        aria-label={`Get started with ${card.title}`}>
+                        <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer w-full md:w-auto">
                           Get Started
                         </button>
                       </Link>
                       <Link
                         href="/packages"
+                        aria-label={`Learn more about ${card.title}`}
                         className="hidden md:block"
                       >
-                        <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer w-full md:w-auto" aria-label={`Learn more about ${card.title} package`}>
+                        <button className="px-16 py-3 bg-soft-beige border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 cursor-pointer w-full md:w-auto" aria-label={`Learn more about ${card.title}`}>
                           Learn More
                         </button>
                       </Link>
