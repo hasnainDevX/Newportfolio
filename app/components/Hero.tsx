@@ -95,7 +95,7 @@ const Hero = () => {
 
         <h1
           ref={headingRef}
-          className="text-[44px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-8xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0 opacity-0"
+          className="text-[44px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-8xl leading-[1.15] sm:leading-[1.12] md:leading-[1.1] mb-6 sm:mb-7 md:mb-8 px-2 sm:px-0 opacity-0 capitalize"
           style={{ fontFamily: "Libre Caslon Text, serif" }}
         >
           Designing & building impactful websites for businesses that are ready
@@ -103,9 +103,9 @@ const Hero = () => {
         </h1>
 
         <div ref={buttonRef} className="opacity-0">
-          <Link href="/enquiry">
+          <Link href="/packages" aria-label="Explore our packages and services">
             <button className="px-16 py-3 bg-soft-beige text-charcoal border-charcoal border-1 rounded-xl hover:bg-charcoal text-sm tracking-widest uppercase hover:text-white transition-colors duration-300 hover:border-yellowish cursor-pointer">
-              Let's Talk
+              View Packages
             </button>
           </Link>
         </div>

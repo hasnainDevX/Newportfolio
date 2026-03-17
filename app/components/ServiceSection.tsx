@@ -9,7 +9,7 @@ const Services = () => {
   // Dynamic height calculation: 3 cards × 150vh per card + 50vh for heading
   const numberOfCards = 3;
   const heightPerCard = 100; // vh per card
-  const headingSpace = 10; // vh for heading section
+  const headingSpace = 20; // vh for heading section
   const totalHeight = numberOfCards * heightPerCard + headingSpace;
 
   const labelRef = useRef<HTMLDivElement>(null);
@@ -26,22 +26,42 @@ const Services = () => {
       defaults: { ease: "power3.out" },
     });
 
-    tl.fromTo(labelRef.current, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6 })
-      .fromTo(headingRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, "-=0.3")
-      .fromTo(paraRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, "-=0.4");
+    tl.fromTo(
+      labelRef.current,
+      { opacity: 0, y: 16 },
+      { opacity: 1, y: 0, duration: 0.6 },
+    )
+      .fromTo(
+        headingRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.9 },
+        "-=0.3",
+      )
+      .fromTo(
+        paraRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.7 },
+        "-=0.4",
+      );
   }, []);
 
   return (
-    <div 
-      className="w-full "
-      style={{ height: `${totalHeight}vh` }}
-    >
+    <div className="w-full " style={{ height: `${totalHeight}vh` }}>
       {/* Heading Section */}
       <div className="pt-12 pb-8 sm:pt-16 sm:pb-10 md:pt-20 md:pb-12 px-5 sm:px-6 md:px-16 ">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-[#2A2A2A] " style={{ fontFamily: "Libre Caslon Text, serif" }}>
-          Web Design and Development{" "}
-          <span className="text-charcoal">Services</span>
+        <h1
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-[#2A2A2A] "
+          style={{ fontFamily: "Libre Caslon Text, serif" }}
+        >
+          A Package Built for <span className="italic">Where You Are</span>
         </h1>
+        <p
+          ref={paraRef}
+          className="text-center text-gray-600 font-sans text-sm sm:text-base mt-4 max-w-xl mx-auto"
+        >
+          Whether you're just starting out or ready to scale — there's a package
+          designed for exactly where you are right now.
+        </p>
       </div>
 
       {/* Sticky Cards */}

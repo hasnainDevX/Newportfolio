@@ -29,7 +29,6 @@ const ExperienceSection = () => {
   const ruleRef = useRef<HTMLDivElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const tagsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -71,23 +70,6 @@ const ExperienceSection = () => {
           { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
           "-=0.25"
         );
-
-      // Tags — staggered batch reveal
-      if (tagsRef.current) {
-        const tags = tagsRef.current.querySelectorAll(".tag-item");
-        tl.fromTo(
-          tags,
-          { opacity: 0, y: 20 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            ease: "power2.out",
-            stagger: 0.06,
-          },
-          "-=0.4"
-        );
-      }
     }, sectionRef);
 
     return () => ctx.revert();
@@ -149,9 +131,9 @@ const ExperienceSection = () => {
 
           {/* Right — tag cloud */}
           <div className="lg:w-3/5">
-            <div ref={tagsRef} className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3">
               {industries.map((industry, idx) => (
-                <div key={idx} className="tag-item group" style={{ opacity: 0 }}>
+                <div key={idx} className="tag-item group">
                   <span
                     className="inline-flex items-center gap-2 px-5 py-3 border font-sans text-sm cursor-default select-none
                       transition-all duration-300

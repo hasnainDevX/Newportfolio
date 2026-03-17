@@ -28,7 +28,7 @@ const PortfolioSection = () => {
         >
           Project <span className="">Spotlight</span>
         </h1>
-        <p className="text-sm md:text-xl px-4 md:px-16 text-center text-[#2A2A2A] max-w-7xl mx-auto">
+        <p className="text-sm md:text-lg font-sans text-gray-600 px-4 md:px-16 text-center max-w-7xl mx-auto">
           Every site was built from scratch — no templates, no shortcuts. Each
           one designed around a specific business, a specific audience, and a
           specific goal. Browse the work and see what's possible when the code
@@ -41,7 +41,7 @@ const PortfolioSection = () => {
             Captivating and Converting{" "}
             <span className="text-[#7a6025]">Portfolio</span>
           </h2>
-          <p className="font-light text-[15px] sm:text-base md:text-[17px] lg:text-lg leading-relaxed sm:leading-relaxed md:leading-loose font-lato text-charcoal/75 max-w-xl">
+          <p className="font-light text-[15px] sm:text-base md:text-[17px] lg:text-lg leading-relaxed sm:leading-relaxed md:leading-loose font-sans text-charcoal/75 max-w-xl">
             Some are service businesses. Some are e-commerce. All of them needed
             something that actually worked — not just looked good. That's what's
             in here.
